@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/joseandressalazar/Desktop/7mo Semestre/Moviles/AppPresion/heartPressureApp/heartPressureApp/TestApp.csv">
+   </FileRef>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02B660C50C3ADE14575E41A1 /* Pods_heartPressureAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3890B33221E215B404A7C08A /* Pods_heartPressureAppUITests.framework */; };
+		0D3F72D0219D075C00E05637 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F72CF219D075C00E05637 /* PopOverViewController.swift */; };
+		0D461D0C2170F6C000A4BC47 /* CalcularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D0B2170F6C000A4BC47 /* CalcularViewController.swift */; };
+		0D461D0E217100C600A4BC47 /* BarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D0D217100C600A4BC47 /* BarometroViewController.swift */; };
+		0D461D102171074300A4BC47 /* ResultadoDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D0F2171074300A4BC47 /* ResultadoDoctorViewController.swift */; };
+		0D461D12217107DF00A4BC47 /* ResultadoPacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D11217107DF00A4BC47 /* ResultadoPacienteViewController.swift */; };
+		0D461D14217113C500A4BC47 /* InformacionDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D13217113C500A4BC47 /* InformacionDoctorViewController.swift */; };
+		0D461D16217113E800A4BC47 /* InformacionPacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D15217113E800A4BC47 /* InformacionPacienteViewController.swift */; };
+		0D6945B321685E6000A72166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945B221685E6000A72166 /* AppDelegate.swift */; };
+		0D6945B521685E6000A72166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945B421685E6000A72166 /* ViewController.swift */; };
+		0D6945B821685E6000A72166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6945B621685E6000A72166 /* Main.storyboard */; };
+		0D6945BA21685E6100A72166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6945B921685E6100A72166 /* Assets.xcassets */; };
+		0D6945BD21685E6100A72166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6945BB21685E6100A72166 /* LaunchScreen.storyboard */; };
+		0D6945C821685E6100A72166 /* heartPressureAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945C721685E6100A72166 /* heartPressureAppTests.swift */; };
+		0D6945D321685E6100A72166 /* heartPressureAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945D221685E6100A72166 /* heartPressureAppUITests.swift */; };
+		0DEA0AE12188EEE70028579F /* OpcionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA0AE02188EEE70028579F /* OpcionesViewController.swift */; };
+		11DD62F17CE4279E4D6125C7 /* Pods_heartPressureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F180B3851FD34CD7F2D361 /* Pods_heartPressureApp.framework */; };
+		1C2A948A2CB279C4FDBD2379 /* Pods_heartPressureAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DE7BAF1BED1892F119FEAA /* Pods_heartPressureAppTests.framework */; };
+		39462E3C2191573C0028462E /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39462E3B2191573C0028462E /* Registro.storyboard */; };
+		39462E3E219157730028462E /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462E3D219157730028462E /* RegistroViewController.swift */; };
+		A24651822192611A0052931B /* TestsApp.csv in Resources */ = {isa = PBXBuildFile; fileRef = A24651812192611A0052931B /* TestsApp.csv */; };
+		A277CF152193863C00474982 /* TestsApp1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF132193863B00474982 /* TestsApp1.csv */; };
+		A277CF162193863C00474982 /* TestsApp2.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF142193863B00474982 /* TestsApp2.csv */; };
+		FBD6C95822541C39002E783B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBD6C95722541C39002E783B /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D6945C421685E6100A72166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D6945A721685E6000A72166 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D6945AE21685E6000A72166;
+			remoteInfo = heartPressureApp;
+		};
+		0D6945CF21685E6100A72166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D6945A721685E6000A72166 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D6945AE21685E6000A72166;
+			remoteInfo = heartPressureApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D3F72CF219D075C00E05637 /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
+		0D461D0B2170F6C000A4BC47 /* CalcularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcularViewController.swift; sourceTree = "<group>"; };
+		0D461D0D217100C600A4BC47 /* BarometroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometroViewController.swift; sourceTree = "<group>"; };
+		0D461D0F2171074300A4BC47 /* ResultadoDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoDoctorViewController.swift; sourceTree = "<group>"; };
+		0D461D11217107DF00A4BC47 /* ResultadoPacienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoPacienteViewController.swift; sourceTree = "<group>"; };
+		0D461D13217113C500A4BC47 /* InformacionDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionDoctorViewController.swift; sourceTree = "<group>"; };
+		0D461D15217113E800A4BC47 /* InformacionPacienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionPacienteViewController.swift; sourceTree = "<group>"; };
+		0D6945AF21685E6000A72166 /* heartPressureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heartPressureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D6945B221685E6000A72166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D6945B421685E6000A72166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D6945B721685E6000A72166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0D6945B921685E6100A72166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D6945BC21685E6100A72166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0D6945BE21685E6100A72166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D6945C321685E6100A72166 /* heartPressureAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heartPressureAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D6945C721685E6100A72166 /* heartPressureAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartPressureAppTests.swift; sourceTree = "<group>"; };
+		0D6945C921685E6100A72166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D6945CE21685E6100A72166 /* heartPressureAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heartPressureAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D6945D221685E6100A72166 /* heartPressureAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartPressureAppUITests.swift; sourceTree = "<group>"; };
+		0D6945D421685E6100A72166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DEA0AE02188EEE70028579F /* OpcionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesViewController.swift; sourceTree = "<group>"; };
+		2F1375C916A330B6A2F62FA0 /* Pods-heartPressureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp.release.xcconfig"; sourceTree = "<group>"; };
+		32E24C221C101E5F20A338FD /* Pods-heartPressureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3890B33221E215B404A7C08A /* Pods_heartPressureAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartPressureAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39462E3B2191573C0028462E /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
+		39462E3D219157730028462E /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		42DE7BAF1BED1892F119FEAA /* Pods_heartPressureAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartPressureAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		459729CDF5893A8DBFCA1A9C /* Pods-heartPressureAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppTests/Pods-heartPressureAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		59F180B3851FD34CD7F2D361 /* Pods_heartPressureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartPressureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		915078858E514FE9EC8A9352 /* Pods-heartPressureAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppUITests/Pods-heartPressureAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A24651812192611A0052931B /* TestsApp.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestsApp.csv; sourceTree = "<group>"; };
+		A277CF132193863B00474982 /* TestsApp1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestsApp1.csv; sourceTree = "<group>"; };
+		A277CF142193863B00474982 /* TestsApp2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestsApp2.csv; sourceTree = "<group>"; };
+		E6928F238FD1405AB05AD79A /* Pods-heartPressureAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppUITests/Pods-heartPressureAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EFC1BE3719E1E512D2F11054 /* Pods-heartPressureAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppTests/Pods-heartPressureAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBD6C95722541C39002E783B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D6945AC21685E6000A72166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD62F17CE4279E4D6125C7 /* Pods_heartPressureApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D6945C021685E6100A72166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C2A948A2CB279C4FDBD2379 /* Pods_heartPressureAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D6945CB21685E6100A72166 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02B660C50C3ADE14575E41A1 /* Pods_heartPressureAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D6945A621685E6000A72166 = {
+			isa = PBXGroup;
+			children = (
+				0D6945B121685E6000A72166 /* heartPressureApp */,
+				0D6945C621685E6100A72166 /* heartPressureAppTests */,
+				0D6945D121685E6100A72166 /* heartPressureAppUITests */,
+				0D6945B021685E6000A72166 /* Products */,
+				A40BD4E315BE9E4837EA7968 /* Pods */,
+				29CF7B56B5E4DAE9932844D1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0D6945B021685E6000A72166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D6945AF21685E6000A72166 /* heartPressureApp.app */,
+				0D6945C321685E6100A72166 /* heartPressureAppTests.xctest */,
+				0D6945CE21685E6100A72166 /* heartPressureAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D6945B121685E6000A72166 /* heartPressureApp */ = {
+			isa = PBXGroup;
+			children = (
+				FBD6C95722541C39002E783B /* GoogleService-Info.plist */,
+				A24651812192611A0052931B /* TestsApp.csv */,
+				0D6945B221685E6000A72166 /* AppDelegate.swift */,
+				0D6945B421685E6000A72166 /* ViewController.swift */,
+				0D6945B621685E6000A72166 /* Main.storyboard */,
+				0D3F72CF219D075C00E05637 /* PopOverViewController.swift */,
+				A277CF132193863B00474982 /* TestsApp1.csv */,
+				A277CF142193863B00474982 /* TestsApp2.csv */,
+				39462E3B2191573C0028462E /* Registro.storyboard */,
+				39462E3D219157730028462E /* RegistroViewController.swift */,
+				0DEA0AE02188EEE70028579F /* OpcionesViewController.swift */,
+				0D461D15217113E800A4BC47 /* InformacionPacienteViewController.swift */,
+				0D461D13217113C500A4BC47 /* InformacionDoctorViewController.swift */,
+				0D461D11217107DF00A4BC47 /* ResultadoPacienteViewController.swift */,
+				0D461D0F2171074300A4BC47 /* ResultadoDoctorViewController.swift */,
+				0D461D0D217100C600A4BC47 /* BarometroViewController.swift */,
+				0D461D0B2170F6C000A4BC47 /* CalcularViewController.swift */,
+				0D6945B921685E6100A72166 /* Assets.xcassets */,
+				0D6945BB21685E6100A72166 /* LaunchScreen.storyboard */,
+				0D6945BE21685E6100A72166 /* Info.plist */,
+			);
+			path = heartPressureApp;
+			sourceTree = "<group>";
+		};
+		0D6945C621685E6100A72166 /* heartPressureAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D6945C721685E6100A72166 /* heartPressureAppTests.swift */,
+				0D6945C921685E6100A72166 /* Info.plist */,
+			);
+			path = heartPressureAppTests;
+			sourceTree = "<group>";
+		};
+		0D6945D121685E6100A72166 /* heartPressureAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0D6945D221685E6100A72166 /* heartPressureAppUITests.swift */,
+				0D6945D421685E6100A72166 /* Info.plist */,
+			);
+			path = heartPressureAppUITests;
+			sourceTree = "<group>";
+		};
+		29CF7B56B5E4DAE9932844D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59F180B3851FD34CD7F2D361 /* Pods_heartPressureApp.framework */,
+				42DE7BAF1BED1892F119FEAA /* Pods_heartPressureAppTests.framework */,
+				3890B33221E215B404A7C08A /* Pods_heartPressureAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40BD4E315BE9E4837EA7968 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32E24C221C101E5F20A338FD /* Pods-heartPressureApp.debug.xcconfig */,
+				2F1375C916A330B6A2F62FA0 /* Pods-heartPressureApp.release.xcconfig */,
+				EFC1BE3719E1E512D2F11054 /* Pods-heartPressureAppTests.debug.xcconfig */,
+				459729CDF5893A8DBFCA1A9C /* Pods-heartPressureAppTests.release.xcconfig */,
+				915078858E514FE9EC8A9352 /* Pods-heartPressureAppUITests.debug.xcconfig */,
+				E6928F238FD1405AB05AD79A /* Pods-heartPressureAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D6945AE21685E6000A72166 /* heartPressureApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D6945D721685E6100A72166 /* Build configuration list for PBXNativeTarget "heartPressureApp" */;
+			buildPhases = (
+				D7D260638DA69590BFC2CAA6 /* [CP] Check Pods Manifest.lock */,
+				0D6945AB21685E6000A72166 /* Sources */,
+				0D6945AC21685E6000A72166 /* Frameworks */,
+				0D6945AD21685E6000A72166 /* Resources */,
+				5A2ADF6206FEFB571DDE290D /* [CP] Embed Pods Frameworks */,
+				0FCC6202FF6C134A08601F88 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = heartPressureApp;
+			productName = heartPressureApp;
+			productReference = 0D6945AF21685E6000A72166 /* heartPressureApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0D6945C221685E6100A72166 /* heartPressureAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D6945DA21685E6100A72166 /* Build configuration list for PBXNativeTarget "heartPressureAppTests" */;
+			buildPhases = (
+				DA7B6B8AF922D60D1CC0D804 /* [CP] Check Pods Manifest.lock */,
+				0D6945BF21685E6100A72166 /* Sources */,
+				0D6945C021685E6100A72166 /* Frameworks */,
+				0D6945C121685E6100A72166 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D6945C521685E6100A72166 /* PBXTargetDependency */,
+			);
+			name = heartPressureAppTests;
+			productName = heartPressureAppTests;
+			productReference = 0D6945C321685E6100A72166 /* heartPressureAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0D6945CD21685E6100A72166 /* heartPressureAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D6945DD21685E6100A72166 /* Build configuration list for PBXNativeTarget "heartPressureAppUITests" */;
+			buildPhases = (
+				8DF41532EAA7C4B5C3D9AAA1 /* [CP] Check Pods Manifest.lock */,
+				0D6945CA21685E6100A72166 /* Sources */,
+				0D6945CB21685E6100A72166 /* Frameworks */,
+				0D6945CC21685E6100A72166 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D6945D021685E6100A72166 /* PBXTargetDependency */,
+			);
+			name = heartPressureAppUITests;
+			productName = heartPressureAppUITests;
+			productReference = 0D6945CE21685E6100A72166 /* heartPressureAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D6945A721685E6000A72166 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Isabela Escalante";
+				TargetAttributes = {
+					0D6945AE21685E6000A72166 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					0D6945C221685E6100A72166 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 0D6945AE21685E6000A72166;
+					};
+					0D6945CD21685E6100A72166 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 0D6945AE21685E6000A72166;
+					};
+				};
+			};
+			buildConfigurationList = 0D6945AA21685E6000A72166 /* Build configuration list for PBXProject "heartPressureApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0D6945A621685E6000A72166;
+			productRefGroup = 0D6945B021685E6000A72166 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D6945AE21685E6000A72166 /* heartPressureApp */,
+				0D6945C221685E6100A72166 /* heartPressureAppTests */,
+				0D6945CD21685E6100A72166 /* heartPressureAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D6945AD21685E6000A72166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A24651822192611A0052931B /* TestsApp.csv in Resources */,
+				0D6945BD21685E6100A72166 /* LaunchScreen.storyboard in Resources */,
+				FBD6C95822541C39002E783B /* GoogleService-Info.plist in Resources */,
+				0D6945BA21685E6100A72166 /* Assets.xcassets in Resources */,
+				0D6945B821685E6000A72166 /* Main.storyboard in Resources */,
+				A277CF162193863C00474982 /* TestsApp2.csv in Resources */,
+				A277CF152193863C00474982 /* TestsApp1.csv in Resources */,
+				39462E3C2191573C0028462E /* Registro.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D6945C121685E6100A72166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D6945CC21685E6100A72166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FCC6202FF6C134A08601F88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A2ADF6206FEFB571DDE290D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DF41532EAA7C4B5C3D9AAA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-heartPressureAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7D260638DA69590BFC2CAA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-heartPressureApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA7B6B8AF922D60D1CC0D804 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-heartPressureAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D6945AB21685E6000A72166 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D461D14217113C500A4BC47 /* InformacionDoctorViewController.swift in Sources */,
+				0D461D0C2170F6C000A4BC47 /* CalcularViewController.swift in Sources */,
+				0D461D12217107DF00A4BC47 /* ResultadoPacienteViewController.swift in Sources */,
+				39462E3E219157730028462E /* RegistroViewController.swift in Sources */,
+				0D3F72D0219D075C00E05637 /* PopOverViewController.swift in Sources */,
+				0D461D102171074300A4BC47 /* ResultadoDoctorViewController.swift in Sources */,
+				0D6945B521685E6000A72166 /* ViewController.swift in Sources */,
+				0D461D0E217100C600A4BC47 /* BarometroViewController.swift in Sources */,
+				0DEA0AE12188EEE70028579F /* OpcionesViewController.swift in Sources */,
+				0D6945B321685E6000A72166 /* AppDelegate.swift in Sources */,
+				0D461D16217113E800A4BC47 /* InformacionPacienteViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D6945BF21685E6100A72166 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6945C821685E6100A72166 /* heartPressureAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D6945CA21685E6100A72166 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6945D321685E6100A72166 /* heartPressureAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D6945C521685E6100A72166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D6945AE21685E6000A72166 /* heartPressureApp */;
+			targetProxy = 0D6945C421685E6100A72166 /* PBXContainerItemProxy */;
+		};
+		0D6945D021685E6100A72166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D6945AE21685E6000A72166 /* heartPressureApp */;
+			targetProxy = 0D6945CF21685E6100A72166 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0D6945B621685E6000A72166 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D6945B721685E6000A72166 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0D6945BB21685E6100A72166 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D6945BC21685E6100A72166 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0D6945D521685E6100A72166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0D6945D621685E6100A72166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D6945D821685E6100A72166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E24C221C101E5F20A338FD /* Pods-heartPressureApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DNNPL233UV;
+				INFOPLIST_FILE = heartPressureApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gonz.heartPressureApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0D6945D921685E6100A72166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1375C916A330B6A2F62FA0 /* Pods-heartPressureApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DNNPL233UV;
+				INFOPLIST_FILE = heartPressureApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gonz.heartPressureApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0D6945DB21685E6100A72166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFC1BE3719E1E512D2F11054 /* Pods-heartPressureAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = heartPressureAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.heartPressureAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/heartPressureApp.app/heartPressureApp";
+			};
+			name = Debug;
+		};
+		0D6945DC21685E6100A72166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459729CDF5893A8DBFCA1A9C /* Pods-heartPressureAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = heartPressureAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.heartPressureAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/heartPressureApp.app/heartPressureApp";
+			};
+			name = Release;
+		};
+		0D6945DE21685E6100A72166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 915078858E514FE9EC8A9352 /* Pods-heartPressureAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = heartPressureAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.heartPressureAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = heartPressureApp;
+			};
+			name = Debug;
+		};
+		0D6945DF21685E6100A72166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6928F238FD1405AB05AD79A /* Pods-heartPressureAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = heartPressureAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = a.heartPressureAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = heartPressureApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D6945AA21685E6000A72166 /* Build configuration list for PBXProject "heartPressureApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D6945D521685E6100A72166 /* Debug */,
+				0D6945D621685E6100A72166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D6945D721685E6100A72166 /* Build configuration list for PBXNativeTarget "heartPressureApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D6945D821685E6100A72166 /* Debug */,
+				0D6945D921685E6100A72166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D6945DA21685E6100A72166 /* Build configuration list for PBXNativeTarget "heartPressureAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D6945DB21685E6100A72166 /* Debug */,
+				0D6945DC21685E6100A72166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D6945DD21685E6100A72166 /* Build configuration list for PBXNativeTarget "heartPressureAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D6945DE21685E6100A72166 /* Debug */,
+				0D6945DF21685E6100A72166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D6945A721685E6000A72166 /* Project object */;
+}
