@@ -26,9 +26,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="LyY-zK-Ikb" kind="presentation" id="5wN-SQ-N3d"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-kR-qEH">
                                 <rect key="frame" x="337" y="625" width="22" height="22"/>
@@ -53,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="btnCalcular" destination="Sf8-rJ-ZA0" id="WvQ-o2-vsA"/>
+                        <segue destination="r8N-1h-HTH" kind="presentation" id="5FX-BN-DcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,6 +92,24 @@ Isabela Escalante
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zev-lN-T7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-178.40000000000001" y="53.973013493253376"/>
+        </scene>
+        <!--Animacion Barometro View Controller-->
+        <scene sceneID="Ux7-XW-KlZ">
+            <objects>
+                <viewController id="r8N-1h-HTH" customClass="AnimacionBarometroViewController" customModule="heartPressureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="08G-hc-wBY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Yj-QU-eLE"/>
+                    </view>
+                    <connections>
+                        <segue destination="hdj-wo-BPS" kind="presentation" id="uTt-BP-U8S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6n-2w-eyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="-664"/>
         </scene>
         <!--Registro-->
         <scene sceneID="pum-P9-nP8">
@@ -305,12 +321,11 @@ Isabela Escalante
                     </view>
                     <connections>
                         <outlet property="lblPercent" destination="79H-ho-SjV" id="hbn-7W-XtP"/>
-                        <segue destination="hdj-wo-BPS" kind="presentation" identifier="opcion" id="yto-xC-SZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKv-kn-DA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="-664"/>
+            <point key="canvasLocation" x="2562" y="421"/>
         </scene>
         <!--Opciones View Controller-->
         <scene sceneID="1vF-mu-4y2">
@@ -1297,6 +1312,7 @@ Isabela Escalante
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="uTt-BP-U8S"/>
         <segue reference="xuW-t9-dcy"/>
     </inferredMetricsTieBreakers>
 </document>

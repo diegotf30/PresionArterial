@@ -30,6 +30,8 @@
 		A24651822192611A0052931B /* TestsApp.csv in Resources */ = {isa = PBXBuildFile; fileRef = A24651812192611A0052931B /* TestsApp.csv */; };
 		A277CF152193863C00474982 /* TestsApp1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF132193863B00474982 /* TestsApp1.csv */; };
 		A277CF162193863C00474982 /* TestsApp2.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF142193863B00474982 /* TestsApp2.csv */; };
+		FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */; };
+		FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B84192272136F0048A702 /* gaugeView.swift */; };
 		FBD6C95822541C39002E783B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBD6C95722541C39002E783B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		A277CF142193863B00474982 /* TestsApp2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestsApp2.csv; sourceTree = "<group>"; };
 		E6928F238FD1405AB05AD79A /* Pods-heartPressureAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppUITests/Pods-heartPressureAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EFC1BE3719E1E512D2F11054 /* Pods-heartPressureAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppTests/Pods-heartPressureAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimacionBarometroViewController.swift; sourceTree = "<group>"; };
+		FB8B84192272136F0048A702 /* gaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaugeView.swift; sourceTree = "<group>"; };
 		FBD6C95722541C39002E783B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,10 +147,12 @@
 			isa = PBXGroup;
 			children = (
 				FBD6C95722541C39002E783B /* GoogleService-Info.plist */,
+				FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */,
 				A24651812192611A0052931B /* TestsApp.csv */,
 				0D6945B221685E6000A72166 /* AppDelegate.swift */,
 				0D6945B421685E6000A72166 /* ViewController.swift */,
 				0D6945B621685E6000A72166 /* Main.storyboard */,
+				FB8B84192272136F0048A702 /* gaugeView.swift */,
 				0D3F72CF219D075C00E05637 /* PopOverViewController.swift */,
 				A277CF132193863B00474982 /* TestsApp1.csv */,
 				A277CF142193863B00474982 /* TestsApp2.csv */,
@@ -475,6 +481,8 @@
 				39462E3E219157730028462E /* RegistroViewController.swift in Sources */,
 				0D3F72D0219D075C00E05637 /* PopOverViewController.swift in Sources */,
 				0D461D102171074300A4BC47 /* ResultadoDoctorViewController.swift in Sources */,
+				FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */,
+				FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */,
 				0D6945B521685E6000A72166 /* ViewController.swift in Sources */,
 				0D461D0E217100C600A4BC47 /* BarometroViewController.swift in Sources */,
 				0DEA0AE12188EEE70028579F /* OpcionesViewController.swift in Sources */,

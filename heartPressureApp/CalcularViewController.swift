@@ -46,7 +46,7 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
             vistaPopOver.popoverPresentationController!.delegate = self
         }
         else {
-            let nextView = segue.destination as! BarometroViewController
+            let nextView = segue.destination as! AnimacionBarometroViewController
             nextView.tipoUsuario = self.userType
         }
 
