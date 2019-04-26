@@ -32,7 +32,7 @@
 		A277CF162193863C00474982 /* TestsApp2.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF142193863B00474982 /* TestsApp2.csv */; };
 		FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */; };
 		FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B84192272136F0048A702 /* gaugeView.swift */; };
-		FBD6C95822541C39002E783B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBD6C95722541C39002E783B /* GoogleService-Info.plist */; };
+		FBB6B08122738169001D4A25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBB6B08022738169001D4A25 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +90,7 @@
 		EFC1BE3719E1E512D2F11054 /* Pods-heartPressureAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppTests/Pods-heartPressureAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimacionBarometroViewController.swift; sourceTree = "<group>"; };
 		FB8B84192272136F0048A702 /* gaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaugeView.swift; sourceTree = "<group>"; };
-		FBD6C95722541C39002E783B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBB6B08022738169001D4A25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,10 +146,10 @@
 		0D6945B121685E6000A72166 /* heartPressureApp */ = {
 			isa = PBXGroup;
 			children = (
-				FBD6C95722541C39002E783B /* GoogleService-Info.plist */,
 				FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */,
 				A24651812192611A0052931B /* TestsApp.csv */,
 				0D6945B221685E6000A72166 /* AppDelegate.swift */,
+				FBB6B08022738169001D4A25 /* GoogleService-Info.plist */,
 				0D6945B421685E6000A72166 /* ViewController.swift */,
 				0D6945B621685E6000A72166 /* Main.storyboard */,
 				FB8B84192272136F0048A702 /* gaugeView.swift */,
@@ -324,7 +324,7 @@
 			files = (
 				A24651822192611A0052931B /* TestsApp.csv in Resources */,
 				0D6945BD21685E6100A72166 /* LaunchScreen.storyboard in Resources */,
-				FBD6C95822541C39002E783B /* GoogleService-Info.plist in Resources */,
+				FBB6B08122738169001D4A25 /* GoogleService-Info.plist in Resources */,
 				0D6945BA21685E6100A72166 /* Assets.xcassets in Resources */,
 				0D6945B821685E6000A72166 /* Main.storyboard in Resources */,
 				A277CF162193863C00474982 /* TestsApp2.csv in Resources */,

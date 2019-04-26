@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="15n-yj-ZZb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="15n-yj-ZZb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,6 +26,9 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="LyY-zK-Ikb" kind="presentation" id="sbt-E2-Am6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-kR-qEH">
                                 <rect key="frame" x="337" y="625" width="22" height="22"/>
@@ -50,7 +53,6 @@
                     </view>
                     <connections>
                         <outlet property="btnCalcular" destination="Sf8-rJ-ZA0" id="WvQ-o2-vsA"/>
-                        <segue destination="r8N-1h-HTH" kind="presentation" id="5FX-BN-DcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,13 +105,10 @@ Isabela Escalante
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7Yj-QU-eLE"/>
                     </view>
-                    <connections>
-                        <segue destination="hdj-wo-BPS" kind="presentation" id="uTt-BP-U8S"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6n-2w-eyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="-664"/>
+            <point key="canvasLocation" x="2364" y="366"/>
         </scene>
         <!--Registro-->
         <scene sceneID="pum-P9-nP8">
@@ -321,11 +320,12 @@ Isabela Escalante
                     </view>
                     <connections>
                         <outlet property="lblPercent" destination="79H-ho-SjV" id="hbn-7W-XtP"/>
+                        <segue destination="hdj-wo-BPS" kind="presentation" identifier="opcion" id="2th-iq-qIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKv-kn-DA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2562" y="421"/>
+            <point key="canvasLocation" x="814" y="-664"/>
         </scene>
         <!--Opciones View Controller-->
         <scene sceneID="1vF-mu-4y2">
@@ -969,7 +969,7 @@ Isabela Escalante
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2597.5999999999999" y="-1599.8500749625189"/>
+            <point key="canvasLocation" x="2002" y="-1885"/>
         </scene>
         <!--Informacion Doctor View Controller-->
         <scene sceneID="0YF-qn-gp0">
@@ -1305,14 +1305,14 @@ Isabela Escalante
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3781.5999999999999" y="-1448.7256371814094"/>
+            <point key="canvasLocation" x="4353" y="-1863"/>
         </scene>
     </scenes>
     <resources>
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uTt-BP-U8S"/>
-        <segue reference="xuW-t9-dcy"/>
+        <segue reference="jJ9-cF-62A"/>
+        <segue reference="MGS-iq-I9E"/>
     </inferredMetricsTieBreakers>
 </document>
