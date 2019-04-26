@@ -18,6 +18,7 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
     var ref: DatabaseReference!
     var databaseHande : DatabaseHandle!
     var userType : String!
+    var user = Auth.auth().currentUser
     
     override func viewDidLoad() {
         super.viewDidLoad()

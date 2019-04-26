@@ -33,6 +33,7 @@
 		FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */; };
 		FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B84192272136F0048A702 /* gaugeView.swift */; };
 		FBB6B08122738169001D4A25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBB6B08022738169001D4A25 /* GoogleService-Info.plist */; };
+		FBB6B08922738DC2001D4A25 /* PacientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB6B08822738DC2001D4A25 /* PacientesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimacionBarometroViewController.swift; sourceTree = "<group>"; };
 		FB8B84192272136F0048A702 /* gaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaugeView.swift; sourceTree = "<group>"; };
 		FBB6B08022738169001D4A25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBB6B08822738DC2001D4A25 /* PacientesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				A24651812192611A0052931B /* TestsApp.csv */,
 				0D6945B221685E6000A72166 /* AppDelegate.swift */,
 				FBB6B08022738169001D4A25 /* GoogleService-Info.plist */,
+				FBB6B08822738DC2001D4A25 /* PacientesTableViewController.swift */,
 				0D6945B421685E6000A72166 /* ViewController.swift */,
 				0D6945B621685E6000A72166 /* Main.storyboard */,
 				FB8B84192272136F0048A702 /* gaugeView.swift */,
@@ -381,9 +384,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -391,9 +398,13 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -487,6 +498,7 @@
 				0D461D0E217100C600A4BC47 /* BarometroViewController.swift in Sources */,
 				0DEA0AE12188EEE70028579F /* OpcionesViewController.swift in Sources */,
 				0D6945B321685E6000A72166 /* AppDelegate.swift in Sources */,
+				FBB6B08922738DC2001D4A25 /* PacientesTableViewController.swift in Sources */,
 				0D461D16217113E800A4BC47 /* InformacionPacienteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

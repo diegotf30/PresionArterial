@@ -42,7 +42,6 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
         let password = tfPsswd.text!
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
-            let message : String!
             if let err = error {
                 let alert = UIAlertController(title: "Error al Registrarse", message: err.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

@@ -834,7 +834,7 @@ Isabela Escalante
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Siguiente"/>
                                                         <connections>
-                                                            <segue destination="mzF-kD-A5Z" kind="show" id="lDw-dT-CG3"/>
+                                                            <segue destination="qmq-Oo-B5U" kind="show" id="URN-kl-YsL"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Tasa de desinflado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-bt-F3j">
@@ -971,6 +971,84 @@ Isabela Escalante
             </objects>
             <point key="canvasLocation" x="2002" y="-1885"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="shA-FI-hlq">
+            <objects>
+                <viewController id="qmq-Oo-B5U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RwE-ti-tnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anF-j9-2cj">
+                                <rect key="frame" x="0.0" y="73" width="375" height="322.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.59999999999999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Si">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCalcular:" destination="hdj-wo-BPS" eventType="touchUpInside" id="mLf-Oi-bCr"/>
+                                    <segue destination="mzF-kD-A5Z" kind="show" id="1yy-pw-wdJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq5-pl-41f">
+                                <rect key="frame" x="0.0" y="344" width="375" height="322.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.59999999999999998" blue="0.68235294120000001" alpha="0.4921339897" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnResultados:" destination="hdj-wo-BPS" eventType="touchUpInside" id="x4d-mz-tsZ"/>
+                                    <segue destination="Diy-NF-340" kind="show" id="mnz-9g-JZx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿El paciente es nuevo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-WM-khI">
+                                <rect key="frame" x="46" y="30" width="283" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8HP-ta-H49"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zyb-4i-gN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3193" y="-2270"/>
+        </scene>
+        <!--Pacientes Table View Controller-->
+        <scene sceneID="eDK-e1-oPc">
+            <objects>
+                <tableViewController id="Diy-NF-340" customClass="PacientesTableViewController" customModule="heartPressureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HyT-IY-1ha">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="byW-c2-g1k">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="byW-c2-g1k" id="jyG-nB-Qsg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Diy-NF-340" id="Zxu-0B-QlI"/>
+                            <outlet property="delegate" destination="Diy-NF-340" id="MBL-bf-102"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5q-ed-cr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3193" y="-1523"/>
+        </scene>
         <!--Informacion Doctor View Controller-->
         <scene sceneID="0YF-qn-gp0">
             <objects>
@@ -985,24 +1063,13 @@ Isabela Escalante
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8R-uI-P45">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="706"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kep-cw-7HL">
-                                                <rect key="frame" x="31" y="156" width="313" height="29"/>
-                                                <segments>
-                                                    <segment title="Paciente nuevo"/>
-                                                    <segment title="Paciente existente"/>
-                                                </segments>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <connections>
-                                                    <action selector="segControlPaciente:" destination="mzF-kD-A5Z" eventType="valueChanged" id="WUb-Qb-J5e"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciales de paciente:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdp-8C-kam">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Iniciales de paciente:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdp-8C-kam">
                                                 <rect key="frame" x="111" y="235" width="153" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFE-Cj-T7a">
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFE-Cj-T7a">
                                                 <rect key="frame" x="139" y="264" width="97" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="LeJ-Xk-hH1"/>
@@ -1024,7 +1091,7 @@ Isabela Escalante
                                                     <action selector="btnGuardarInfo:" destination="mzF-kD-A5Z" eventType="touchUpInside" id="Iit-dO-6O7"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh0-uG-KI2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Resultados" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh0-uG-KI2">
                                                 <rect key="frame" x="0.0" y="60" width="375" height="80"/>
                                                 <color key="backgroundColor" red="0.098039215690000001" green="0.59999999999999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -1047,13 +1114,13 @@ Isabela Escalante
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzo-Jy-Trf">
-                                                        <rect key="frame" x="62" y="69" width="44" height="21"/>
+                                                        <rect key="frame" x="62" y="69" width="44" height="21.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGE-n4-WLF">
-                                                        <rect key="frame" x="205" y="118" width="30" height="21"/>
+                                                        <rect key="frame" x="205" y="118.5" width="30" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="30b-Tk-GMY"/>
                                                         </constraints>
@@ -1062,7 +1129,7 @@ Isabela Escalante
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talla:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGQ-lo-PfM">
-                                                        <rect key="frame" x="69" y="160" width="37" height="21"/>
+                                                        <rect key="frame" x="69" y="160.5" width="37" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="dDi-7P-e7J"/>
                                                         </constraints>
@@ -1071,19 +1138,19 @@ Isabela Escalante
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hipertensión:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-GP-xbF">
-                                                        <rect key="frame" x="9" y="204" width="97" height="21"/>
+                                                        <rect key="frame" x="9" y="204.5" width="97" height="21"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colesterol:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsA-9j-Ov7">
-                                                        <rect key="frame" x="28" y="293" width="78" height="21"/>
+                                                        <rect key="frame" x="28" y="293.5" width="78" height="21"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tabaquismo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-5b-y31">
-                                                        <rect key="frame" x="11" y="336" width="95" height="21"/>
+                                                        <rect key="frame" x="11" y="336.5" width="95" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1095,7 +1162,7 @@ Isabela Escalante
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tke-h4-VTC">
-                                                        <rect key="frame" x="120" y="109" width="66" height="30"/>
+                                                        <rect key="frame" x="120" y="109.5" width="66" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="66" id="HVh-w1-HTo"/>
                                                         </constraints>
@@ -1104,7 +1171,7 @@ Isabela Escalante
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0b-AJ-jwD">
-                                                        <rect key="frame" x="120" y="156" width="66" height="31"/>
+                                                        <rect key="frame" x="120" y="156.5" width="66" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="31" id="Mqd-sL-Agk"/>
                                                         </constraints>
@@ -1112,41 +1179,20 @@ Isabela Escalante
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
-                                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQK-4t-xN1">
-                                                        <rect key="frame" x="121" y="200" width="186" height="29"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ExP-6I-tfp">
-                                                        <rect key="frame" x="121" y="334" width="186" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="lDS-JI-J4B"/>
-                                                        </constraints>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hwp-Ht-5vl">
-                                                        <rect key="frame" x="121" y="65" width="186" height="29"/>
+                                                        <rect key="frame" x="121" y="65" width="186" height="29.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
-                                                    <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26P-g0-DZ5">
-                                                        <rect key="frame" x="121" y="288" width="186" height="31"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diabetes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFk-E8-AIs">
-                                                        <rect key="frame" x="34" y="247" width="72" height="21"/>
+                                                        <rect key="frame" x="34" y="247.5" width="72" height="21"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXR-vs-Sqs">
-                                                        <rect key="frame" x="64" y="112" width="42" height="21"/>
+                                                        <rect key="frame" x="64" y="112.5" width="42" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="GHW-yR-Ddu"/>
                                                         </constraints>
@@ -1154,34 +1200,39 @@ Isabela Escalante
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oy5-Ko-Jby">
-                                                        <rect key="frame" x="120" y="242" width="187" height="30"/>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naG-ve-qCt">
-                                                        <rect key="frame" x="205" y="159" width="30" height="21"/>
+                                                        <rect key="frame" x="205" y="159.5" width="30" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-X5-62C">
+                                                        <rect key="frame" x="129" y="200" width="49" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="brM-NI-cTI">
+                                                        <rect key="frame" x="129" y="243" width="49" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNG-EQ-q1M">
+                                                        <rect key="frame" x="129" y="288" width="49" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eOd-Uz-NBi">
+                                                        <rect key="frame" x="129" y="331" width="49" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </switch>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Tke-h4-VTC" firstAttribute="baseline" secondItem="dXR-vs-Sqs" secondAttribute="firstBaseline" id="0Js-Yn-9ii"/>
-                                                    <constraint firstItem="UsA-9j-Ov7" firstAttribute="centerY" secondItem="26P-g0-DZ5" secondAttribute="centerY" id="0hp-o2-xu9"/>
                                                     <constraint firstItem="Rzo-Jy-Trf" firstAttribute="trailing" secondItem="dXR-vs-Sqs" secondAttribute="trailing" id="1rF-0k-LRV"/>
                                                     <constraint firstItem="xFk-E8-AIs" firstAttribute="trailing" secondItem="UsA-9j-Ov7" secondAttribute="trailing" id="3Qg-VL-uvb"/>
                                                     <constraint firstItem="UsA-9j-Ov7" firstAttribute="top" secondItem="xFk-E8-AIs" secondAttribute="bottom" constant="25" id="5PO-26-m7h"/>
-                                                    <constraint firstItem="26P-g0-DZ5" firstAttribute="trailing" secondItem="ExP-6I-tfp" secondAttribute="trailing" id="6BB-Gp-NUI"/>
                                                     <constraint firstItem="Hwp-Ht-5vl" firstAttribute="top" secondItem="AwB-B6-UJS" secondAttribute="bottom" constant="19" id="7PK-79-eFW"/>
-                                                    <constraint firstItem="bQK-4t-xN1" firstAttribute="leading" secondItem="26P-g0-DZ5" secondAttribute="leading" id="7kD-T4-nPz"/>
                                                     <constraint firstItem="Hwp-Ht-5vl" firstAttribute="leading" secondItem="Rzo-Jy-Trf" secondAttribute="trailing" constant="15" id="9LT-mE-9PZ"/>
-                                                    <constraint firstItem="bQK-4t-xN1" firstAttribute="trailing" secondItem="Oy5-Ko-Jby" secondAttribute="trailing" id="9SZ-f1-6ic"/>
                                                     <constraint firstItem="uGE-n4-WLF" firstAttribute="trailing" secondItem="naG-ve-qCt" secondAttribute="trailing" id="9iY-02-pyl"/>
                                                     <constraint firstItem="AwB-B6-UJS" firstAttribute="leading" secondItem="Er6-O6-gvt" secondAttribute="trailing" constant="14" id="BFd-gN-JGI"/>
-                                                    <constraint firstAttribute="bottom" secondItem="ExP-6I-tfp" secondAttribute="bottom" constant="27" id="BIn-wf-FcI"/>
                                                     <constraint firstAttribute="trailing" secondItem="Hwp-Ht-5vl" secondAttribute="trailing" constant="68" id="BbF-iC-CW9"/>
                                                     <constraint firstItem="Er6-O6-gvt" firstAttribute="leading" secondItem="YbQ-YV-Jai" secondAttribute="leading" constant="42" id="Bxa-RJ-rsz"/>
                                                     <constraint firstItem="sY3-5b-y31" firstAttribute="leading" secondItem="YbQ-YV-Jai" secondAttribute="leading" constant="11" id="Bxt-BQ-cGF"/>
@@ -1190,38 +1241,27 @@ Isabela Escalante
                                                     <constraint firstItem="dXR-vs-Sqs" firstAttribute="trailing" secondItem="JGQ-lo-PfM" secondAttribute="trailing" id="J3p-mH-4LG"/>
                                                     <constraint firstItem="Rzo-Jy-Trf" firstAttribute="top" secondItem="Er6-O6-gvt" secondAttribute="bottom" constant="30" id="Nga-1d-uVO"/>
                                                     <constraint firstItem="ODy-GP-xbF" firstAttribute="leading" secondItem="YbQ-YV-Jai" secondAttribute="leading" constant="9" id="O83-BO-eGw"/>
-                                                    <constraint firstItem="Oy5-Ko-Jby" firstAttribute="trailing" secondItem="26P-g0-DZ5" secondAttribute="trailing" id="POd-HJ-GLb"/>
                                                     <constraint firstItem="xFk-E8-AIs" firstAttribute="top" secondItem="ODy-GP-xbF" secondAttribute="bottom" constant="22" id="Pd4-Uz-9Us"/>
-                                                    <constraint firstItem="bQK-4t-xN1" firstAttribute="top" secondItem="J0b-AJ-jwD" secondAttribute="bottom" constant="13" id="QD6-YS-MJK"/>
                                                     <constraint firstItem="Er6-O6-gvt" firstAttribute="centerY" secondItem="AwB-B6-UJS" secondAttribute="centerY" id="QKF-G1-eHf"/>
                                                     <constraint firstItem="uGE-n4-WLF" firstAttribute="leading" secondItem="naG-ve-qCt" secondAttribute="leading" id="S0K-lQ-ufD"/>
-                                                    <constraint firstItem="Hwp-Ht-5vl" firstAttribute="trailing" secondItem="bQK-4t-xN1" secondAttribute="trailing" id="Sqm-jL-2aj"/>
                                                     <constraint firstItem="Er6-O6-gvt" firstAttribute="top" secondItem="YbQ-YV-Jai" secondAttribute="top" constant="18" id="Sth-HZ-21Y"/>
-                                                    <constraint firstItem="26P-g0-DZ5" firstAttribute="leading" secondItem="ExP-6I-tfp" secondAttribute="leading" id="ULS-YQ-PSW"/>
                                                     <constraint firstItem="JGQ-lo-PfM" firstAttribute="top" secondItem="dXR-vs-Sqs" secondAttribute="bottom" constant="27" id="XI2-6R-d6y"/>
                                                     <constraint firstAttribute="bottom" secondItem="sY3-5b-y31" secondAttribute="bottom" constant="34" id="Ybk-K5-T99"/>
-                                                    <constraint firstItem="J0b-AJ-jwD" firstAttribute="leading" secondItem="Oy5-Ko-Jby" secondAttribute="leading" id="c4W-hs-9BW"/>
                                                     <constraint firstItem="naG-ve-qCt" firstAttribute="top" secondItem="uGE-n4-WLF" secondAttribute="bottom" constant="20" id="f4K-MA-Jjk"/>
                                                     <constraint firstItem="UsA-9j-Ov7" firstAttribute="trailing" secondItem="sY3-5b-y31" secondAttribute="trailing" id="fTD-HO-8Nr"/>
-                                                    <constraint firstItem="Oy5-Ko-Jby" firstAttribute="top" secondItem="bQK-4t-xN1" secondAttribute="bottom" constant="13" id="gFF-Oo-MoA"/>
-                                                    <constraint firstItem="ODy-GP-xbF" firstAttribute="centerY" secondItem="bQK-4t-xN1" secondAttribute="centerY" id="iz3-qt-efc"/>
                                                     <constraint firstItem="Rzo-Jy-Trf" firstAttribute="centerY" secondItem="Hwp-Ht-5vl" secondAttribute="centerY" id="k45-oi-N78"/>
                                                     <constraint firstItem="Tke-h4-VTC" firstAttribute="leading" secondItem="J0b-AJ-jwD" secondAttribute="leading" id="ke3-wE-ldz"/>
                                                     <constraint firstItem="uGE-n4-WLF" firstAttribute="top" secondItem="Hwp-Ht-5vl" secondAttribute="bottom" constant="24" id="lQs-Si-zXW"/>
                                                     <constraint firstItem="Tke-h4-VTC" firstAttribute="bottom" secondItem="uGE-n4-WLF" secondAttribute="bottom" id="mKz-fe-yet"/>
                                                     <constraint firstAttribute="trailing" secondItem="AwB-B6-UJS" secondAttribute="trailing" constant="67" id="mMs-0a-79e"/>
-                                                    <constraint firstItem="bQK-4t-xN1" firstAttribute="top" secondItem="naG-ve-qCt" secondAttribute="bottom" constant="20" id="me9-64-JQC"/>
                                                     <constraint firstItem="Tke-h4-VTC" firstAttribute="leading" secondItem="dXR-vs-Sqs" secondAttribute="trailing" constant="14" id="okX-78-G6K"/>
                                                     <constraint firstItem="J0b-AJ-jwD" firstAttribute="baseline" secondItem="JGQ-lo-PfM" secondAttribute="firstBaseline" id="oz6-on-4dU"/>
                                                     <constraint firstItem="dXR-vs-Sqs" firstAttribute="top" secondItem="Rzo-Jy-Trf" secondAttribute="bottom" constant="22" id="ozv-6k-fAb"/>
                                                     <constraint firstItem="sY3-5b-y31" firstAttribute="top" secondItem="UsA-9j-Ov7" secondAttribute="bottom" constant="22" id="tRi-88-TfY"/>
                                                     <constraint firstItem="Er6-O6-gvt" firstAttribute="centerX" secondItem="xFk-E8-AIs" secondAttribute="centerX" constant="4" id="tqQ-cX-kay"/>
                                                     <constraint firstItem="uGE-n4-WLF" firstAttribute="leading" secondItem="Tke-h4-VTC" secondAttribute="trailing" constant="19" id="uXG-qb-nPq"/>
-                                                    <constraint firstItem="26P-g0-DZ5" firstAttribute="top" secondItem="Oy5-Ko-Jby" secondAttribute="bottom" constant="16" id="vM8-Ug-eAT"/>
-                                                    <constraint firstItem="ExP-6I-tfp" firstAttribute="top" secondItem="26P-g0-DZ5" secondAttribute="bottom" constant="15" id="xXh-jh-zFM"/>
                                                     <constraint firstItem="ODy-GP-xbF" firstAttribute="top" secondItem="JGQ-lo-PfM" secondAttribute="bottom" constant="23" id="xZa-WK-agA"/>
                                                     <constraint firstItem="JGQ-lo-PfM" firstAttribute="trailing" secondItem="ODy-GP-xbF" secondAttribute="trailing" id="yyd-Bw-zhe"/>
-                                                    <constraint firstItem="Hwp-Ht-5vl" firstAttribute="leading" secondItem="bQK-4t-xN1" secondAttribute="leading" id="znr-qb-S2d"/>
                                                     <constraint firstItem="Tke-h4-VTC" firstAttribute="top" secondItem="Hwp-Ht-5vl" secondAttribute="bottom" constant="15" id="zzs-gG-Sef"/>
                                                 </constraints>
                                             </view>
@@ -1236,24 +1276,26 @@ Isabela Escalante
                                                     <action selector="btnRegresar:" destination="mzF-kD-A5Z" eventType="touchUpInside" id="Z2z-i6-xEq"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por favor, complete la información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJx-hw-CCO">
+                                                <rect key="frame" x="54" y="167" width="289" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="YbQ-YV-Jai" firstAttribute="top" secondItem="e8R-uI-P45" secondAttribute="top" constant="198" id="5Mg-ju-oFP"/>
                                             <constraint firstItem="hFE-Cj-T7a" firstAttribute="top" secondItem="mdp-8C-kam" secondAttribute="bottom" constant="8" symbolic="YES" id="5uE-4Y-BV5"/>
                                             <constraint firstItem="YbQ-YV-Jai" firstAttribute="centerX" secondItem="qh0-uG-KI2" secondAttribute="centerX" id="Dyg-C3-wyw"/>
-                                            <constraint firstItem="YbQ-YV-Jai" firstAttribute="top" secondItem="Kep-cw-7HL" secondAttribute="bottom" constant="14" id="EHp-sz-ITB"/>
-                                            <constraint firstItem="mdp-8C-kam" firstAttribute="centerX" secondItem="Kep-cw-7HL" secondAttribute="centerX" id="HFA-2y-SGm"/>
                                             <constraint firstItem="YbQ-YV-Jai" firstAttribute="centerX" secondItem="e8R-uI-P45" secondAttribute="centerX" id="HUA-Yb-BUM"/>
                                             <constraint firstAttribute="height" constant="706" id="IKD-bK-v7J"/>
-                                            <constraint firstItem="Kep-cw-7HL" firstAttribute="top" secondItem="qh0-uG-KI2" secondAttribute="bottom" constant="16" id="Kfg-Z1-6YF"/>
                                             <constraint firstAttribute="bottom" secondItem="YbQ-YV-Jai" secondAttribute="bottom" constant="117" id="Reu-2N-q4e"/>
                                             <constraint firstItem="mdp-8C-kam" firstAttribute="centerX" secondItem="hFE-Cj-T7a" secondAttribute="centerX" id="ZAS-eB-dJj"/>
                                             <constraint firstItem="byI-ic-QEF" firstAttribute="top" secondItem="YbQ-YV-Jai" secondAttribute="bottom" constant="8" id="bhp-JL-YoO"/>
                                             <constraint firstItem="YbQ-YV-Jai" firstAttribute="trailing" secondItem="byI-ic-QEF" secondAttribute="trailing" constant="40" id="etm-FT-wRT"/>
-                                            <constraint firstItem="YbQ-YV-Jai" firstAttribute="centerX" secondItem="Kep-cw-7HL" secondAttribute="centerX" id="fuR-Mq-1bB"/>
                                             <constraint firstItem="qh0-uG-KI2" firstAttribute="leading" secondItem="e8R-uI-P45" secondAttribute="leading" id="qW1-AU-Iw9"/>
-                                            <constraint firstItem="mdp-8C-kam" firstAttribute="top" secondItem="Kep-cw-7HL" secondAttribute="bottom" constant="51" id="sUR-Hb-Ocs"/>
                                             <constraint firstItem="YbQ-YV-Jai" firstAttribute="leading" secondItem="e8R-uI-P45" secondAttribute="leading" id="wcC-Qm-vMI"/>
                                         </constraints>
                                     </view>
@@ -1284,15 +1326,14 @@ Isabela Escalante
                         <outlet property="btnGuardar" destination="byI-ic-QEF" id="mQd-BG-lnr"/>
                         <outlet property="infoView" destination="e8R-uI-P45" id="cfh-zR-tij"/>
                         <outlet property="scrollView" destination="lkv-eN-xgC" id="dZu-Ey-RmK"/>
-                        <outlet property="segcontrol" destination="Kep-cw-7HL" id="v2F-TN-e1o"/>
-                        <outlet property="tfColesterol" destination="26P-g0-DZ5" id="EXm-KU-xiT"/>
-                        <outlet property="tfDiabetes" destination="Oy5-Ko-Jby" id="IkX-MI-eqj"/>
+                        <outlet property="swColesterol" destination="oNG-EQ-q1M" id="TNY-0r-h1J"/>
+                        <outlet property="swDiabetes" destination="brM-NI-cTI" id="KrB-kZ-hK5"/>
+                        <outlet property="swHipertension" destination="Tfq-X5-62C" id="rMr-tH-6or"/>
+                        <outlet property="swTabaquismo" destination="eOd-Uz-NBi" id="OAk-s0-NO2"/>
                         <outlet property="tfEdad" destination="Hwp-Ht-5vl" id="BvC-y2-Cgn"/>
-                        <outlet property="tfHipertension" destination="bQK-4t-xN1" id="U1s-b4-box"/>
                         <outlet property="tfNombre" destination="AwB-B6-UJS" id="LUZ-Kj-Oep"/>
                         <outlet property="tfPeso" destination="Tke-h4-VTC" id="eAZ-FC-NcW"/>
                         <outlet property="tfSiglas" destination="hFE-Cj-T7a" id="jtX-KB-yQg"/>
-                        <outlet property="tfTabaquismo" destination="ExP-6I-tfp" id="VUU-nh-SiD"/>
                         <outlet property="tfTalla" destination="J0b-AJ-jwD" id="1jv-Ep-tnU"/>
                         <outlet property="viewPacienteNuevo" destination="YbQ-YV-Jai" id="T38-Bo-1TW"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="return" id="MGS-iq-I9E"/>
@@ -1305,14 +1346,13 @@ Isabela Escalante
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4353" y="-1863"/>
+            <point key="canvasLocation" x="4352.8000000000002" y="-1863.4182908545729"/>
         </scene>
     </scenes>
     <resources>
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jJ9-cF-62A"/>
-        <segue reference="MGS-iq-I9E"/>
+        <segue reference="BnR-NA-MFK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ pod 'Firebase/Core'
 
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
+pod 'Firebase/Firestore'
 
   target 'heartPressureAppTests' do
     inherit! :search_paths
