@@ -39,6 +39,14 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE3-Zc-V8V">
+                                <rect key="frame" x="164" y="554" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="r8N-1h-HTH" kind="presentation" identifier="barometro" id="4wj-zR-ZiT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -108,7 +116,7 @@ Isabela Escalante
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6n-2w-eyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="366"/>
+            <point key="canvasLocation" x="814" y="115"/>
         </scene>
         <!--Registro-->
         <scene sceneID="pum-P9-nP8">
@@ -1312,7 +1320,7 @@ Isabela Escalante
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jJ9-cF-62A"/>
+        <segue reference="2th-iq-qIy"/>
         <segue reference="MGS-iq-I9E"/>
     </inferredMetricsTieBreakers>
 </document>
