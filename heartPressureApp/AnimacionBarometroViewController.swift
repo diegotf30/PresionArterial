@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Charts
 
 class AnimacionBarometroViewController: UIViewController {
     
     @IBOutlet weak var lblPercent: UILabel!
+    @IBOutlet weak var viewChart: LineChartView!
+    
     let shapeLayer = CAShapeLayer()
     var tipoUsuario : String!
     
@@ -38,6 +41,9 @@ class AnimacionBarometroViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.title = "Line Chart 1" // Chart Title
+        
+        
         test.backgroundColor = .clear
         view.addSubview(test)
         
@@ -58,6 +64,7 @@ class AnimacionBarometroViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 1) {
                 self.test.value = Double(self.csvRows[self.row][0])!
+                self.renderCharts()
             }
         }
         
@@ -67,8 +74,30 @@ class AnimacionBarometroViewController: UIViewController {
     }
     
     
+    @IBAction func renderCharts() {
+        lineChartUpdate()
+    }
     
+    func lineChartUpdate(){
+        // X : Time && Y : Presion
     
+        var lineChartData = [ChartDataEntry]()
+        let numbers = [1,2,3,4,5]
+        
+        for i in 0..<numbers.count{
+            let value = ChartDataEntry(x: Double(i), y: Double(numbers[i]))
+            lineChartData.append(value)
+        }
+        
+        let line1 = LineChartDataSet(values: lineChartData, label: "Presion")
+        
+        let data = LineChartData()
+        
+        data.addDataSet(line1)
+        
+        viewChart.data = data
+        viewChart.chartDescription?.text = "Test.-"
+    }
     
     func readDataFromCSV(fileName:String, fileType: String)-> String!{
         guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
