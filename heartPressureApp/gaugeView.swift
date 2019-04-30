@@ -22,7 +22,7 @@ class GaugeView: UIView {
     var segmentColors = [UIColor(red: 0.7, green: 0, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0.7, green: 0, blue: 0, alpha: 1)]
     
     var totalAngle: CGFloat = 270
-    var rotation: CGFloat = -135
+    var rotation: CGFloat = 0
     
     var majorTickColor = UIColor.black
     var majorTickWidth: CGFloat = 2
@@ -48,7 +48,7 @@ class GaugeView: UIView {
     var valueColor = UIColor.black
     
     
-    var value: Int = 0 {
+    var value: Double = 0 {
         didSet {
             // update the value label to show the exact number
             valueLabel.text = String(value)
@@ -105,7 +105,7 @@ class GaugeView: UIView {
         
         // 2: Move to the center of our drawing rectangle and rotate so that we're pointing at the start of the first segment
         ctx.translateBy(x: rect.midX, y: rect.midY)
-        ctx.rotate(by: deg2rad(rotation) - (.pi / 2))
+        ctx.rotate(by: deg2rad(-135) - (.pi / 2))
         
         // 3: Set up the user's line width
         ctx.setLineWidth(segmentWidth)
@@ -224,7 +224,7 @@ class GaugeView: UIView {
         addSubview(needle)
         
         valueLabel.font = valueFont
-        valueLabel.text = "100"
+        valueLabel.text = ""
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(valueLabel)
         

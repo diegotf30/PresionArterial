@@ -23,7 +23,7 @@ class AnimacionBarometroViewController: UIViewController {
     var diast = 0.0 //diastolica
     var tasa = [Double]()
     var tasaDesinflado = 0.0
-    var row = 0
+    var row = 2
     
     let animTime = 20.0 //tiempo de animación
     let maxPressure = 260.0
@@ -48,7 +48,6 @@ class AnimacionBarometroViewController: UIViewController {
         mitad = csvRows.count/2 + 2
         amp = Double(csvRows[2][3])!
         animateBarometer()
-    
     }
     
     func animateBarometer(){
@@ -56,14 +55,12 @@ class AnimacionBarometroViewController: UIViewController {
     }
     
     @IBAction func muestraNumero(){
-        
-        if(Int(csvRows[row][0])) != 0){
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                UIView.animate(withDuration: 1) {
-                    self.test.value = Int(self.csvRows[self.row][0])!
-                }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            UIView.animate(withDuration: 1) {
+                self.test.value = Double(self.csvRows[self.row][0])!
             }
         }
+        
         row += 1
  
         
