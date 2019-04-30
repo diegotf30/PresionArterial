@@ -27,6 +27,7 @@ class AnimacionBarometroViewController: UIViewController {
     var tasa = [Double]()
     var tasaDesinflado = 0.0
     var row = 2
+    var counter = 0
     
     let animTime = 20.0 //tiempo de animación
     let maxPressure = 260.0
@@ -64,7 +65,8 @@ class AnimacionBarometroViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 1) {
                 self.test.value = Double(self.csvRows[self.row][0])!
-                self.renderCharts()
+                self.counter += 1
+                self.lineChartUpdate(x: Double(self.counter), y: self.test.value)
             }
         }
         
@@ -74,20 +76,18 @@ class AnimacionBarometroViewController: UIViewController {
     }
     
     
-    @IBAction func renderCharts() {
-        lineChartUpdate()
-    }
+    /*@IBAction func renderCharts(x: Double, y: Double) {
+        
+    } */
     
-    func lineChartUpdate(){
+    func lineChartUpdate(x: Double, y: Double){
         // X : Time && Y : Presion
     
         var lineChartData = [ChartDataEntry]()
-        let numbers = [1,2,3,4,5]
         
-        for i in 0..<numbers.count{
-            let value = ChartDataEntry(x: Double(i), y: Double(numbers[i]))
-            lineChartData.append(value)
-        }
+        let value = ChartDataEntry(x: x, y: y)
+        lineChartData.append(value)
+        
         
         let line1 = LineChartDataSet(values: lineChartData, label: "Presion")
         
