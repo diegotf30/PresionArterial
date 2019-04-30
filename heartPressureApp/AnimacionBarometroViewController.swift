@@ -29,7 +29,7 @@ class AnimacionBarometroViewController: UIViewController {
     var row = 2
     var counter = 0
     
-    let animTime = 20.0 //tiempo de animación
+    let animTime = 50.0 //tiempo de animación ORIGINAL 20
     let maxPressure = 260.0
     let pressureOK = 120.0
     let pressureWarning = 140.0
@@ -91,11 +91,25 @@ class AnimacionBarometroViewController: UIViewController {
         
         let line1 = LineChartDataSet(values: lineChartData, label: "Presion")
         
+        line1.lineDashLengths = [5, 2.5]
+        line1.highlightLineDashLengths = [5, 2.5]
+        line1.setColor(.black)
+        line1.setCircleColor(.black)
+        line1.lineWidth = 1
+        line1.circleRadius = 3
+        line1.drawCircleHoleEnabled = false
+        line1.valueFont = .systemFont(ofSize: 9)
+        line1.formLineDashLengths = [5, 2.5]
+        line1.formLineWidth = 1
+        line1.formSize = 15
+        
+        
         let data = LineChartData()
         
         data.addDataSet(line1)
         
         viewChart.data = data
+        viewChart.zoomToCenter(scaleX: -50, scaleY: -50)
         viewChart.chartDescription?.text = "Test.-"
     }
     
