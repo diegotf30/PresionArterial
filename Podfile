@@ -10,6 +10,7 @@ target 'heartPressureApp' do
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
+pod 'Firebase/Firestore'
 
 pod 'GoogleSignIn'
 pod 'Firebase/Database'

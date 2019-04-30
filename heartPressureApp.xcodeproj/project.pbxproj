@@ -32,6 +32,9 @@
 		A277CF162193863C00474982 /* TestsApp2.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF142193863B00474982 /* TestsApp2.csv */; };
 		FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */; };
 		FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B84192272136F0048A702 /* gaugeView.swift */; };
+		FBA690832278D20800F29557 /* ListaPacientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA690822278D20800F29557 /* ListaPacientesViewController.swift */; };
+		FBA690872278E73B00F29557 /* MedicionesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA690862278E73B00F29557 /* MedicionesTableViewController.swift */; };
+		FBA690892278E7F800F29557 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA690882278E7F800F29557 /* CustomTableViewCell.swift */; };
 		FBDB74D42277A782003F1272 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBDB74D32277A782003F1272 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,9 @@
 		EFC1BE3719E1E512D2F11054 /* Pods-heartPressureAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppTests/Pods-heartPressureAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimacionBarometroViewController.swift; sourceTree = "<group>"; };
 		FB8B84192272136F0048A702 /* gaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaugeView.swift; sourceTree = "<group>"; };
+		FBA690822278D20800F29557 /* ListaPacientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPacientesViewController.swift; sourceTree = "<group>"; };
+		FBA690862278E73B00F29557 /* MedicionesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicionesTableViewController.swift; sourceTree = "<group>"; };
+		FBA690882278E7F800F29557 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		FBDB74D32277A782003F1272 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +157,7 @@
 				0D6945B221685E6000A72166 /* AppDelegate.swift */,
 				0D6945B421685E6000A72166 /* ViewController.swift */,
 				0D6945B621685E6000A72166 /* Main.storyboard */,
+				FBA690822278D20800F29557 /* ListaPacientesViewController.swift */,
 				FBDB74D32277A782003F1272 /* GoogleService-Info.plist */,
 				FB8B84192272136F0048A702 /* gaugeView.swift */,
 				0D3F72CF219D075C00E05637 /* PopOverViewController.swift */,
@@ -168,6 +175,8 @@
 				0D6945B921685E6100A72166 /* Assets.xcassets */,
 				0D6945BB21685E6100A72166 /* LaunchScreen.storyboard */,
 				0D6945BE21685E6100A72166 /* Info.plist */,
+				FBA690862278E73B00F29557 /* MedicionesTableViewController.swift */,
+				FBA690882278E7F800F29557 /* CustomTableViewCell.swift */,
 			);
 			path = heartPressureApp;
 			sourceTree = "<group>";
@@ -381,9 +390,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -391,9 +404,13 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -477,6 +494,7 @@
 			files = (
 				0D461D14217113C500A4BC47 /* InformacionDoctorViewController.swift in Sources */,
 				0D461D0C2170F6C000A4BC47 /* CalcularViewController.swift in Sources */,
+				FBA690892278E7F800F29557 /* CustomTableViewCell.swift in Sources */,
 				0D461D12217107DF00A4BC47 /* ResultadoPacienteViewController.swift in Sources */,
 				39462E3E219157730028462E /* RegistroViewController.swift in Sources */,
 				0D3F72D0219D075C00E05637 /* PopOverViewController.swift in Sources */,
@@ -484,6 +502,8 @@
 				FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */,
 				FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */,
 				0D6945B521685E6000A72166 /* ViewController.swift in Sources */,
+				FBA690832278D20800F29557 /* ListaPacientesViewController.swift in Sources */,
+				FBA690872278E73B00F29557 /* MedicionesTableViewController.swift in Sources */,
 				0D461D0E217100C600A4BC47 /* BarometroViewController.swift in Sources */,
 				0DEA0AE12188EEE70028579F /* OpcionesViewController.swift in Sources */,
 				0D6945B321685E6000A72166 /* AppDelegate.swift in Sources */,
