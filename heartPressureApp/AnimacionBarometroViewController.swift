@@ -17,6 +17,8 @@ class AnimacionBarometroViewController: UIViewController {
     let shapeLayer = CAShapeLayer()
     var tipoUsuario : String!
     
+    var lineChartData = [ChartDataEntry]()
+    
     var csvRows = [[String]]()
     var tiempo : Timer!
     var n = 0 //numero de datos en CSV
@@ -29,7 +31,7 @@ class AnimacionBarometroViewController: UIViewController {
     var row = 2
     var counter = 0
     
-    let animTime = 50.0 //tiempo de animación ORIGINAL 20
+    let animTime = 20.0 //tiempo de animación ORIGINAL 20
     let maxPressure = 260.0
     let pressureOK = 120.0
     let pressureWarning = 140.0
@@ -42,8 +44,10 @@ class AnimacionBarometroViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // START CHARTS
         self.title = "Line Chart 1" // Chart Title
-        
+
+        // END CHARTS
         
         test.backgroundColor = .clear
         view.addSubview(test)
@@ -62,17 +66,21 @@ class AnimacionBarometroViewController: UIViewController {
     }
     
     @IBAction func muestraNumero(){
+        
+        if(row + 2 == n){
+            tiempo.invalidate()
+            sleep(1)
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 1) {
                 self.test.value = Double(self.csvRows[self.row][0])!
+                let value = ChartDataEntry(x: Double(self.counter), y: self.test.value)
+                self.lineChartData.append(value)
                 self.counter += 1
-                self.lineChartUpdate(x: Double(self.counter), y: self.test.value)
             }
         }
-        
+        lineChartUpdate(values: self.lineChartData)
         row += 1
- 
-        
     }
     
     
@@ -80,14 +88,8 @@ class AnimacionBarometroViewController: UIViewController {
         
     } */
     
-    func lineChartUpdate(x: Double, y: Double){
+    func lineChartUpdate(values: [ChartDataEntry]){
         // X : Time && Y : Presion
-    
-        var lineChartData = [ChartDataEntry]()
-        
-        let value = ChartDataEntry(x: x, y: y)
-        lineChartData.append(value)
-        
         
         let line1 = LineChartDataSet(values: lineChartData, label: "Presion")
         
@@ -100,13 +102,11 @@ class AnimacionBarometroViewController: UIViewController {
         line1.drawCircleHoleEnabled = false
         line1.valueFont = .systemFont(ofSize: 9)
         line1.formLineDashLengths = [5, 2.5]
-        line1.formLineWidth = 1
+        line1.formLineWidth = 30
         line1.formSize = 15
         
         
-        let data = LineChartData()
-        
-        data.addDataSet(line1)
+        let data = LineChartData(dataSet: line1)
         
         viewChart.data = data
         viewChart.zoomToCenter(scaleX: -50, scaleY: -50)
