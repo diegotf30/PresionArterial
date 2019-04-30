@@ -979,6 +979,36 @@ Isabela Escalante
             </objects>
             <point key="canvasLocation" x="2002" y="-1885"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="u8M-UK-do6">
+            <objects>
+                <viewController id="jRg-32-w8Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xgS-79-6eD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="37d-0Q-Tgf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Q0-8r-oWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3228" y="-2367"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F3p-Ju-K3v">
+            <objects>
+                <viewController id="Kci-Zh-rGJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yGo-jJ-luv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Z0K-wa-E90"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMM-0o-l0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3223" y="-1576"/>
+        </scene>
         <!--Informacion Doctor View Controller-->
         <scene sceneID="0YF-qn-gp0">
             <objects>
@@ -1320,7 +1350,6 @@ Isabela Escalante
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2th-iq-qIy"/>
         <segue reference="MGS-iq-I9E"/>
     </inferredMetricsTieBreakers>
 </document>

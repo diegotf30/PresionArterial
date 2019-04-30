@@ -30,8 +30,7 @@ class AnimacionBarometroViewController: UIViewController {
     let pressureOK = 120.0
     let pressureWarning = 140.0
     
-     let test = GaugeView(frame: CGRect(x: 40, y: 40, width: 256, height: 256))
-
+    let test = GaugeView(frame: CGRect(x: 10, y: 10, width: 256, height: 256))
     
 
     override func viewDidLoad() {
@@ -39,6 +38,7 @@ class AnimacionBarometroViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         test.backgroundColor = .clear
+        test.center = CGPoint(x: view.frame.size.width  / 2, y: view.frame.size.height / 2)
         view.addSubview(test)
         
         var data = readDataFromCSV(fileName: "TestsApp2", fileType: "csv")
@@ -55,19 +55,18 @@ class AnimacionBarometroViewController: UIViewController {
     }
     
     @IBAction func muestraNumero(){
+        
+        if(row + 2 == n){
+            tiempo.invalidate()
+            sleep(1)
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 1) {
                 self.test.value = Double(self.csvRows[self.row][0])!
             }
         }
-        
         row += 1
- 
-        
     }
-    
-    
-    
     
     
     func readDataFromCSV(fileName:String, fileType: String)-> String!{

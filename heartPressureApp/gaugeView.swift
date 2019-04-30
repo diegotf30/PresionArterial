@@ -21,7 +21,7 @@ class GaugeView: UIView {
     var segmentWidth: CGFloat = 20
     var segmentColors = [UIColor(red: 0.7, green: 0, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0.7, green: 0, blue: 0, alpha: 1)]
     
-    var totalAngle: CGFloat = 270
+    var totalAngle: CGFloat = 140
     var rotation: CGFloat = 0
     
     var majorTickColor = UIColor.black
@@ -73,7 +73,7 @@ class GaugeView: UIView {
     override func draw(_ rect: CGRect) {
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
         drawBackground(in: rect, context: ctx)
-        drawSegments(in: rect, context: ctx)
+        //drawSegments(in: rect, context: ctx)
         drawTicks(in: rect, context: ctx)
         drawCenterDisc(in: rect, context: ctx)
     }
@@ -99,6 +99,8 @@ class GaugeView: UIView {
         return number * .pi / 180
     }
     
+    /*
+    
     func drawSegments(in rect: CGRect, context ctx: CGContext) {
         // 1: Save the current drawing configuration
         ctx.saveGState()
@@ -111,7 +113,7 @@ class GaugeView: UIView {
         ctx.setLineWidth(segmentWidth)
         
         // 4: Calculate the size of each segment in the total gauge
-        let segmentAngle = deg2rad(totalAngle / CGFloat(segmentColors.count))
+        let segmentAngle = deg2rad(270 / CGFloat(segmentColors.count))
         
         // 5: Calculate how wide the segment arcs should be
         let segmentRadius = (((rect.width - segmentWidth) / 2) - outerBezelWidth) - innerBezelWidth
@@ -134,14 +136,16 @@ class GaugeView: UIView {
         // 7: Reset the graphics state
         ctx.restoreGState()
     }
+ */
+    
     
     func drawTicks(in rect: CGRect, context ctx: CGContext) {
         // save our clean graphics state
         ctx.saveGState()
         ctx.translateBy(x: rect.midX, y: rect.midY)
-        ctx.rotate(by: deg2rad(rotation) - (.pi / 2))
+        ctx.rotate(by: deg2rad(0) - (.pi / 2))
         
-        let segmentAngle = deg2rad(totalAngle / CGFloat(segmentColors.count))
+        let segmentAngle = deg2rad(360 / CGFloat(segmentColors.count))
         
         let segmentRadius = (((rect.width - segmentWidth) / 2) - outerBezelWidth) - innerBezelWidth
         
