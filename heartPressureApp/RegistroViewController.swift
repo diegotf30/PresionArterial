@@ -21,6 +21,7 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var datosView: UIView!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     var ref: DatabaseReference!
+    var tipoUsuario : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,6 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
         let password = tfPsswd.text!
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
-            let message : String!
             if let err = error {
                 let alert = UIAlertController(title: "Error al Registrarse", message: err.localizedDescription, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -51,13 +51,11 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
                 return
             }
             if self.userType.selectedSegmentIndex == 0 {
-                let post = ["usuario": email,
-                           "Tipo": "Doctor"]
-                self.ref?.child("Usuarios").childByAutoId().setValue(post);
+                //Doctor
+                self.tipoUsuario = "Doctor"
             }else{
-                let post = ["usuario": email,
-                           "Tipo": "Paciente"]
-                self.ref?.child("Usuarios").childByAutoId().setValue(post);
+                //Paciente
+                self.tipoUsuario = "Paciente"
             }
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.usuario = email

@@ -30,23 +30,18 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         
         getCollection()
         
-        
-        
-        tbView.isHidden = true
+        //tbView.isHidden = true
         for str in listaNombres{
             print(str)
             //tempNombre.append(str)
         }
         
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         tfSearch.addTarget(self, action: #selector(searchRecords(_:)), for: .editingChanged)
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
         tfSearch.addTarget(self, action: #selector(ListaPacientesViewController.textFieldDidChange(_:)), for: .editingChanged)
+        // Do any additional setup after loading the view.
     }
     
     func getCollection() {
@@ -64,7 +59,6 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
                 }
             }
         }
-        
         // [END get_collection]
     }
     
@@ -79,7 +73,7 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
     
     //MARK: searchRecords
     @objc func searchRecords(_ textField: UITextField){
-        //listaNombres.removeAll()
+        listaNombres.removeAll()
         if textField.text?.count != 0 {
             for str in tempNombre{
                 if let nombreToSearch = textField.text{

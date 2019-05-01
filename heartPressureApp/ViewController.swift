@@ -87,11 +87,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
         }
     }
     
-    @IBAction func signOutGoogle(_ sender: Any) {
-        GIDSignIn.sharedInstance().signOut()
-    }
-    
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
