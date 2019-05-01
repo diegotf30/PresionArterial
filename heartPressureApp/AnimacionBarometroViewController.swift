@@ -12,8 +12,13 @@ import Charts
 class AnimacionBarometroViewController: UIViewController {
     
     @IBOutlet weak var lblPercent: UILabel!
+    @IBOutlet weak var viewChart: LineChartView!
+    
     let shapeLayer = CAShapeLayer()
     var tipoUsuario : String!
+    
+    var lineChartData = [ChartDataEntry]()
+    var counter = 0
     
     var csvRows = [[String]]()
     var tiempo : Timer!
@@ -31,6 +36,7 @@ class AnimacionBarometroViewController: UIViewController {
     let pressureOK = 120.0
     let pressureWarning = 140.0
     
+    // Original X: 10, Y: 10
     let test = GaugeView(frame: CGRect(x: 10, y: 10, width: 256, height: 256))
     
 
@@ -39,7 +45,7 @@ class AnimacionBarometroViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         test.backgroundColor = .clear
-        test.center = CGPoint(x: view.frame.size.width  / 2, y: view.frame.size.height / 2)
+        test.center = CGPoint(x: view.frame.size.width  / 2, y: view.frame.size.height / 2 - 180)
         view.addSubview(test)
         
         var data = readDataFromCSV(fileName: "TestsApp2", fileType: "csv")
@@ -54,6 +60,7 @@ class AnimacionBarometroViewController: UIViewController {
     func animateBarometer(){
         tiempo = Timer.scheduledTimer(timeInterval: TimeInterval(animTime / Double(n)), target: self, selector: #selector(muestraNumero), userInfo: nil, repeats: true)
         // Incluir la Chart cunado termine el intervalo.
+        // lineChartUpdate(values: self.lineChartData)
     }
     
     @IBAction func muestraNumero(){
@@ -65,11 +72,38 @@ class AnimacionBarometroViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 1) {
                 self.test.value = Double(self.csvRows[self.row][0])!
+                let value = ChartDataEntry(x: Double(self.counter), y: self.test.value)
+                self.lineChartData.append(value)
+                self.counter += 1
             }
+            self.lineChartUpdate(values: self.lineChartData)
         }
         row += 1
     }
     
+    func lineChartUpdate(values: [ChartDataEntry]){
+        // X : Time && Y : Presion
+        
+        let line1 = LineChartDataSet(values: lineChartData, label: "Presion")
+        
+        line1.lineDashLengths = [5, 2.5]
+        line1.highlightLineDashLengths = [5, 2.5]
+        line1.setColor(.black)
+        line1.setCircleColor(.black)
+        line1.lineWidth = 1
+        line1.circleRadius = 3
+        line1.drawCircleHoleEnabled = false
+        line1.valueFont = .systemFont(ofSize: 9)
+        line1.formLineDashLengths = [5, 2.5]
+        line1.formLineWidth = 30
+        line1.formSize = 15
+        
+        let data = LineChartData(dataSet: line1)
+        
+        viewChart.data = data
+        viewChart.zoomToCenter(scaleX: 0, scaleY: 0)
+        viewChart.chartDescription?.text = "Test.-"
+    }
     
     func readDataFromCSV(fileName:String, fileType: String)-> String!{
         guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
