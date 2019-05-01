@@ -75,6 +75,9 @@ class AnimacionBarometroViewController: UIViewController {
                 let value = ChartDataEntry(x: Double(self.counter), y: self.test.value)
                 self.lineChartData.append(value)
                 self.counter += 1
+                if(self.counter > 100){
+                    self.lineChartData.removeFirst()
+                }
             }
             self.lineChartUpdate(values: self.lineChartData)
         }
