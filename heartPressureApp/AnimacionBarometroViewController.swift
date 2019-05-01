@@ -45,7 +45,6 @@ class AnimacionBarometroViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // START CHARTS
-        self.title = "Line Chart 1" // Chart Title
 
         // END CHARTS
         
@@ -79,7 +78,7 @@ class AnimacionBarometroViewController: UIViewController {
                 self.counter += 1
             }
         }
-        lineChartUpdate(values: self.lineChartData)
+        // lineChartUpdate(values: self.lineChartData)
         row += 1
     }
     
