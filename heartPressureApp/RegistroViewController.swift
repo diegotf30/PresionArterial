@@ -57,15 +57,15 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
                 //Paciente
                 self.tipoUsuario = "Paciente"
             }
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.usuario = email
-            appDelegate.registro = true
-            appDelegate.google = false
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextView = mainStoryboard.instantiateViewController(withIdentifier: "Calcular")
-            self.present(nextView, animated: true, completion: nil)
+            //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            //appDelegate.usuario = email
+            //appDelegate.registro = true
+            //appDelegate.google = false
+            //let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            //let nextView = mainStoryboard.instantiateViewController(withIdentifier: "Calcular")
+            //self.present(nextView, animated: true, completion: nil)
             print("Created Firebase user")
-            guard let user = authResult?.user else { return }
+            //guard let user = authResult?.user else { return }
         }
     }
     
@@ -93,6 +93,14 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
         scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "calcular" {
+            let nextView = segue.destination as! CalcularViewController
+            nextView.tipoUsuario = self.tipoUsuario
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

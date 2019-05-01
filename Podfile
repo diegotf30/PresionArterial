@@ -11,7 +11,7 @@ pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
-
+pod 'Charts'
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
 

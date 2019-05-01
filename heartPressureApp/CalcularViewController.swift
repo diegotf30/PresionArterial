@@ -18,13 +18,16 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
     var ref: DatabaseReference!
     var databaseHande : DatabaseHandle!
     var userType : String!
+    var tipoUsuario: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnCalcular.layer.cornerRadius = 0.34 * btnCalcular.bounds.size.width
+        
+        /*
         ref = Database.database().reference()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
             usuario = appDelegate.usuario
-        btnCalcular.layer.cornerRadius = 0.34 * btnCalcular.bounds.size.width
         if appDelegate.google{
             userType = "Paciente"
         }else{
@@ -38,6 +41,7 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
                 }
             })
         }
+        */
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

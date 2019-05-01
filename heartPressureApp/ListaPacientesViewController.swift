@@ -10,13 +10,18 @@ import UIKit
 
 import Firebase
 
-class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
+    var filteredData = [String]()
+    var isSearching = false
     
     var db: Firestore!
     var listaNombres = [String]()
     var tempNombre = [String]()
     var i = 0
     @IBOutlet weak var tbView: UITableView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var tfSearch: UITextField!
     
@@ -30,6 +35,14 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         
         getCollection()
         
+        tbView.delegate = self
+        tbView.dataSource = self
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
+        
+        /*
+        
+        
         //tbView.isHidden = true
         for str in listaNombres{
             print(str)
@@ -42,6 +55,7 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         self.view.addGestureRecognizer(tap)
         tfSearch.addTarget(self, action: #selector(ListaPacientesViewController.textFieldDidChange(_:)), for: .editingChanged)
         // Do any additional setup after loading the view.
+        */
     }
     
     func getCollection() {
@@ -71,38 +85,45 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    //MARK: searchRecords
-    @objc func searchRecords(_ textField: UITextField){
-        listaNombres.removeAll()
-        if textField.text?.count != 0 {
-            for str in tempNombre{
-                if let nombreToSearch = textField.text{
-                    let range = str.lowercased().range(of: nombreToSearch, options: .caseInsensitive, range: nil, locale: nil)
-                    if range != nil{
-                        listaNombres.append(str)
-                    }
-                }
-            }
-        }
-        else{
-            for str in tempNombre{
-                listaNombres.append(str)
-            }
-        }
-        
-        tbView.reloadData()
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isSearching{
+            return filteredData.count
+        }
         return listaNombres.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath)
         
-        cell.textLabel?.text = listaNombres[indexPath.row]
+        if isSearching{
+            cell.textLabel?.text = filteredData[indexPath.row]
+        }
+        else{
+            cell.textLabel?.text = listaNombres[indexPath.row]
+        }
         
         return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == ""{
+            isSearching = false
+            tbView.reloadData()
+        }
+        else{
+            isSearching = true
+            filteredData = listaNombres.filter{$0.contains(searchBar.text!)}
+            tbView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        /*if isSearching{
+           
+        }
+        else{
+            
+        }*/
     }
     
     

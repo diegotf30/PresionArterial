@@ -16,6 +16,7 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfEdad: UITextField!
     @IBOutlet weak var tfPeso: UITextField!
     @IBOutlet weak var tfTalla: UITextField!
+    @IBOutlet weak var tfCorreo: UITextField!
     
     @IBOutlet weak var swHipertension: UISwitch!
     @IBOutlet weak var swDiabetes: UISwitch!
@@ -82,6 +83,7 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
                 let date = formatter.string(from: Date())
                 
                 let post: [String: Any] = [
+                    "Correo": tfCorreo.text!,
                     "Nombre":  tfNombre.text!,
                     "Edad": tfEdad.text!,
                     "Peso":   tfPeso.text!,
@@ -95,7 +97,6 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
                         ]
                     ]
                 //userName = Auth.auth().currentUser?.email
-                userName = "Samuel@example.com"
                 db.collection("pacientes").document(userName).setData(post){ err in
                     if let err = err {
                         print("Error writing document: \(err)")

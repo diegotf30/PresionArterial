@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 class AnimacionBarometroViewController: UIViewController {
     
@@ -52,6 +53,7 @@ class AnimacionBarometroViewController: UIViewController {
     
     func animateBarometer(){
         tiempo = Timer.scheduledTimer(timeInterval: TimeInterval(animTime / Double(n)), target: self, selector: #selector(muestraNumero), userInfo: nil, repeats: true)
+        // Incluir la Chart cunado termine el intervalo.
     }
     
     @IBAction func muestraNumero(){
