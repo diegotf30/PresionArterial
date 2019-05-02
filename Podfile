@@ -14,6 +14,7 @@ pod 'Firebase/Firestore'
 pod 'Charts'
 pod 'GoogleSignIn'
 pod 'Firebase/Database'
+pod 'BlueCapKit'
 
   target 'heartPressureAppTests' do
     inherit! :search_paths
