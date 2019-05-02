@@ -17,15 +17,16 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
     
     var db: Firestore!
     var listaNombres = [String]()
+    var id : String!
     var tempNombre = [String]()
     var i = 0
     var tipoUsuario : String!
+    var pulso : String!
+    
     
     @IBOutlet weak var tbView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var tfSearch: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,10 +61,6 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         */
     }
     
-    @IBAction func btnRegresar(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     func getCollection() {
         // [START get_collection]
         db.collection("pacientes").getDocuments() { (querySnapshot, err) in
@@ -82,13 +79,8 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         // [END get_collection]
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField){
-        if textField.text != ""{
-            tbView.isHidden = false
-        }
-        else{
-            tbView.isHidden = true
-        }
+    @IBAction func dismiss(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,13 +115,51 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
+    func saveResults(documentName : String!){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = formatter.string(from: Date())
+        
+        db.collection("pacientes").document(documentName).setData([ "Medicion": [
+            date : pulso
+            ] ], merge: true)
+        let alert = UIAlertController(title: "Éxito", message: "La medición fue guardada exitosamente", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /*if isSearching{
-           
+        
+        if isSearching{
+            db.collection("pacientes").whereField("Nombre", isEqualTo: filteredData[indexPath.row])
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            self.id = document.documentID
+                            self.saveResults(documentName: self.id)
+                        }
+                    }
+            }
+            let cell = tableView.cellForRow(at: indexPath)
+            performSegue(withIdentifier: "regresarCalc", sender: cell)
         }
         else{
-            
-        }*/
+            db.collection("pacientes").whereField("Nombre", isEqualTo: listaNombres[indexPath.row])
+                .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            self.id = document.documentID
+                            self.saveResults(documentName: self.id)
+                        }
+                    }
+            }
+            let cell = tableView.cellForRow(at: indexPath)
+            performSegue(withIdentifier: "regresarCalc", sender: cell)
+        }
     }
     
     

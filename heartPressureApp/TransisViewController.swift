@@ -29,9 +29,11 @@ class TransisViewController: UIViewController {
             resultsView.diast = self.diast
             resultsView.tasa = self.tasa
             resultsView.pulso = self.pulso
-        } else {
+        }
+        else if segue.identifier == "search"{
             let searchView = segue.destination as! ListaPacientesViewController
             searchView.tipoUsuario = self.tipoUsuario
+            searchView.pulso = self.pulso
         }
         
         

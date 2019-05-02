@@ -50,10 +50,6 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
         viewPacienteNuevo.isHidden = false
         
         scrollView.contentSize = infoView.frame.size
-        
-        
-        
-        tfSiglas.delegate = self
         tfNombre.delegate = self
         tfEdad.delegate = self
         tfPeso.delegate = self

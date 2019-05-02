@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 self.window = UIWindow(frame: UIScreen.main.bounds)
                 self.window?.rootViewController = initialViewController
                 self.window?.makeKeyAndVisible()
-                print("Successfully logged into firebase with google", user?.userID)
+                //print("Successfully logged into firebase with google", user?.userID)
                 
             }
         }
