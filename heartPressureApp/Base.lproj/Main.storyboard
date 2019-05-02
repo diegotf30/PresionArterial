@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jRg-32-w8Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="15n-yj-ZZb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -103,17 +103,13 @@ Desarrolladores:
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O37-wR-aB6" customClass="LineChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O37-wR-aB6" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="16" y="286" width="343" height="361"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="7Yj-QU-eLE" firstAttribute="trailing" secondItem="O37-wR-aB6" secondAttribute="trailing" constant="16" id="JEJ-SI-t1T"/>
-                            <constraint firstItem="7Yj-QU-eLE" firstAttribute="bottom" secondItem="O37-wR-aB6" secondAttribute="bottom" constant="20" id="U8I-tP-Bdc"/>
-                            <constraint firstItem="O37-wR-aB6" firstAttribute="leading" secondItem="7Yj-QU-eLE" secondAttribute="leading" constant="16" id="wc1-8D-TRk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7Yj-QU-eLE"/>
                     </view>
                     <connections>
@@ -210,9 +206,12 @@ Desarrolladores:
                                                     <action selector="signOutGoogle:" destination="15n-yj-ZZb" eventType="touchUpInside" id="Vbf-Ku-p5w"/>
                                                 </connections>
                                             </button>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-k8-H8R">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-k8-H8R">
                                                 <rect key="frame" x="81" y="483" width="207" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="qCY-LA-c8R"/>
+                                                    <constraint firstAttribute="width" constant="207" id="wko-Jv-hX2"/>
+                                                </constraints>
                                                 <segments>
                                                     <segment title="Doctor"/>
                                                     <segment title="Paciente"/>
@@ -253,6 +252,7 @@ Desarrolladores:
                                             <constraint firstAttribute="height" constant="667" id="PmC-Hq-sP5"/>
                                             <constraint firstItem="nzt-FE-4RV" firstAttribute="top" secondItem="6N8-B9-nvp" secondAttribute="bottom" constant="50" id="Tu3-XB-ycj"/>
                                             <constraint firstItem="p41-d1-Gth" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="VEx-2a-GTg"/>
+                                            <constraint firstAttribute="trailing" secondItem="aiB-k8-H8R" secondAttribute="trailing" constant="87" id="VuD-qd-6Qu"/>
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="bottom" secondItem="Dmz-0W-XSF" secondAttribute="bottomMargin" constant="-19" id="WxX-IP-ApL"/>
                                             <constraint firstItem="6N8-B9-nvp" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="84" id="arR-nF-Cmi"/>
                                             <constraint firstAttribute="bottom" secondItem="CD9-kS-AdZ" secondAttribute="bottom" constant="84" id="c8e-2k-we7"/>
@@ -261,9 +261,12 @@ Desarrolladores:
                                             <constraint firstAttribute="trailing" secondItem="CD9-kS-AdZ" secondAttribute="trailing" constant="87" id="hrN-M2-IY2"/>
                                             <constraint firstAttribute="trailing" secondItem="JSs-Fb-dUz" secondAttribute="trailing" constant="87" id="isI-gT-8Kr"/>
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="centerX" secondItem="ztM-yu-yYv" secondAttribute="centerX" id="lie-2s-743"/>
+                                            <constraint firstItem="CD9-kS-AdZ" firstAttribute="top" secondItem="aiB-k8-H8R" secondAttribute="bottom" constant="38" id="o38-R7-KoN"/>
                                             <constraint firstItem="nzt-FE-4RV" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="q5A-ce-weM"/>
+                                            <constraint firstItem="aiB-k8-H8R" firstAttribute="top" secondItem="JSs-Fb-dUz" secondAttribute="bottom" constant="42" id="qna-cb-2JB"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nzt-FE-4RV" secondAttribute="trailing" constant="20" symbolic="YES" id="xZS-6c-3sh"/>
                                             <constraint firstItem="ztM-yu-yYv" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="zWX-Ri-ahA"/>
+                                            <constraint firstItem="aiB-k8-H8R" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="zaj-EA-gso"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -480,6 +483,9 @@ Desarrolladores:
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Siguiente"/>
+                                                        <connections>
+                                                            <segue destination="jRg-32-w8Z" kind="show" identifier="siguiente" id="5CF-qo-w1x"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Tasa de desinflado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-bt-F3j">
                                                         <rect key="frame" x="32" y="293.5" width="141" height="20.5"/>
@@ -1247,6 +1253,7 @@ Desarrolladores:
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LM5-hR-5pq"/>
+        <segue reference="CfO-j4-ybv"/>
+        <segue reference="rYV-Xt-zPJ"/>
     </inferredMetricsTieBreakers>
 </document>

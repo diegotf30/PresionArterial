@@ -22,6 +22,8 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
     var i = 0
     var tipoUsuario : String!
     var pulso : String!
+    var sist : String!
+    var diast : String!
     
     
     @IBOutlet weak var tbView: UITableView!

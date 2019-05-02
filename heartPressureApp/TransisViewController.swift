@@ -34,6 +34,8 @@ class TransisViewController: UIViewController {
             let searchView = segue.destination as! ListaPacientesViewController
             searchView.tipoUsuario = self.tipoUsuario
             searchView.pulso = self.pulso
+            searchView.sist = self.sist
+            searchView.diast = self.diast
         }
         
         

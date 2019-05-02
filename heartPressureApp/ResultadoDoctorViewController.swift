@@ -30,9 +30,11 @@ class ResultadoDoctorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(tipoUsuario == "Paciente"){
+        print(tipoUsuario)
+        
+        if(self.tipoUsuario == "Paciente"){
             btnRegresar.isHidden = false
-        } else {
+        } else if (self.tipoUsuario == "Docotor"){
             btnRegresar.isHidden = false
             btnSiguiente.isHidden = false
         }

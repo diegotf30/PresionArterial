@@ -94,7 +94,7 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
                         ]
                     ]
                 //userName = Auth.auth().currentUser?.email
-                db.collection("pacientes").document(userName).setData(post){ err in
+                db.collection("pacientes").document(tfCorreo.text!).setData(post){ err in
                     if let err = err {
                         print("Error writing document: \(err)")
                     } else {

@@ -59,7 +59,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
             if self.userType.selectedSegmentIndex == 0 {
                 //Doctor
                 self.tipoUsuario = "Doctor"
-            }else{
+            }else if self.userType.selectedSegmentIndex == 1{
                 //Paciente
                 self.tipoUsuario = "Paciente"
             }

@@ -52,7 +52,7 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
         }
         else if segue.identifier == "barometro"{
             let extraView = segue.destination as! AnimacionBarometroViewController
-            extraView.tipoUsuario = self.userType
+            extraView.tipoUsuario = self.tipoUsuario
         }
 
     }
