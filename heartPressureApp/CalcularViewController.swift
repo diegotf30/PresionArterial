@@ -22,6 +22,7 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(tipoUsuario)
         btnCalcular.layer.cornerRadius = 0.34 * btnCalcular.bounds.size.width
         
         /*
@@ -52,10 +53,6 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
         else if segue.identifier == "barometro"{
             let extraView = segue.destination as! AnimacionBarometroViewController
             extraView.tipoUsuario = self.userType
-        }
-        else {
-            let nextView = segue.destination as! BarometroViewController
-            nextView.tipoUsuario = self.userType
         }
 
     }

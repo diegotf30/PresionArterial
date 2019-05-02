@@ -27,8 +27,9 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnGuardar: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var infoView: UIView!
-    var sistolica : String!
-    var diastolica : String!
+    var tasa : Double!
+    var sist : String!
+    var diast : String!
     var pulso : String!
     var userName : String!
     

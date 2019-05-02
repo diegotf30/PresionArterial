@@ -55,6 +55,7 @@ class AnimacionBarometroViewController: UIViewController {
         mitad = csvRows.count/2 + 2
         amp = Double(csvRows[2][3])!
         animateBarometer()
+        obtenerResultados()
     }
     
     func animateBarometer(){
@@ -68,6 +69,7 @@ class AnimacionBarometroViewController: UIViewController {
         if(row + 2 == n){
             tiempo.invalidate()
             sleep(1)
+            self.performSegue(withIdentifier: "vistaDoc", sender: nil)
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 1) {
@@ -75,6 +77,7 @@ class AnimacionBarometroViewController: UIViewController {
                 let value = ChartDataEntry(x: Double(self.counter), y: self.test.value)
                 self.lineChartData.append(value)
                 self.counter += 1
+                // Que salgan todos los datos, comentar lo de abajo:
                 if(self.counter > 100){
                     self.lineChartData.removeFirst()
                 }
@@ -89,6 +92,8 @@ class AnimacionBarometroViewController: UIViewController {
         
         let line1 = LineChartDataSet(values: lineChartData, label: "Presion")
         
+        line1.drawCirclesEnabled = false
+        line1.drawValuesEnabled = false
         line1.lineDashLengths = [5, 2.5]
         line1.highlightLineDashLengths = [5, 2.5]
         line1.setColor(.black)
@@ -140,12 +145,53 @@ class AnimacionBarometroViewController: UIViewController {
         return result
     }
     
+    func obtenerResultados(){
+        var temp = 0.0
+        var tasaTemp = 0.0
+        
+        //tasa de desinflado
+        for i in (mitad + 1)...n
+        {
+            tasaTemp = Double(csvRows[i][0])! - Double(csvRows[i-1][0])!
+            tasa.append(tasaTemp)
+        }
+        for i in 0...(tasa.count - 1){
+            tasaDesinflado = tasaDesinflado + tasa[i]
+        }
+        tasaDesinflado = (tasaDesinflado/Double((tasa.count))) * 1000
+        
+        //sistolica
+        for i in 3...mitad
+        {
+            if(csvRows[i][1] != "" && csvRows[i][2] != ""){
+                temp = Double(csvRows[i][1])! - Double(csvRows[i][2])!
+                if(temp >= 0.5*amp){
+                    sist = Double(csvRows[i][0])!
+                }
+            }
+        }
+        
+        //diastolica
+        for i in 3...mitad
+        {
+            if(csvRows[i][1] != "" && csvRows[i][2] != ""){
+                temp = Double(csvRows[i][1])! - Double(csvRows[i][2])!
+                if(temp >= 0.8*amp){
+                    diast = Double(csvRows[i][0])!
+                    return
+                }
+            }
+        }
+    }
+    
     //SEGUE
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vistaOp = segue.destination as! OpcionesViewController
-        vistaOp.tasa = tasaDesinflado
-        vistaOp.sist = String(format: "%0.0f", sist)
-        vistaOp.diast = String(format: "%0.0f", diast)
-        vistaOp.tipoUsuario = self.tipoUsuario
+        if segue.identifier == "vistaDoc" {
+            let vistaOp = segue.destination as! ResultadoDoctorViewController
+            vistaOp.tasa = tasaDesinflado
+            vistaOp.sist = String(format: "%0.0f", sist)
+            vistaOp.diast = String(format: "%0.0f", diast)
+            vistaOp.tipoUsuario = self.tipoUsuario
+        }
     }
 }

@@ -13,6 +13,7 @@ class ResultadoDoctorViewController: UIViewController {
     @IBOutlet weak var btnOmitir: UIButton!
     @IBOutlet weak var btnAgregar: UIButton!
     @IBOutlet weak var btnSiguiente: UIButton!
+    @IBOutlet weak var btnRegresar: UIButton! // Btn Regresar
     @IBOutlet weak var resultadosView: UIView!
 
     @IBOutlet weak var datosView: UIView!
@@ -21,22 +22,30 @@ class ResultadoDoctorViewController: UIViewController {
     @IBOutlet weak var lbTasa: UILabel!
     @IBOutlet weak var lblPulso: UILabel!
     
-    var tasaDesinflado : Double!
-    var sistolica : String!
-    var diastolica : String!
+    var tipoUsuario : String!
+    var tasa : Double!
+    var sist : String!
+    var diast : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lbPresion.text = sistolica + " / " + diastolica
-        lbTasa.text = String(format: "%0.5f", tasaDesinflado)
+        if(tipoUsuario == "Paciente"){
+            btnRegresar.isHidden = false
+        } else {
+            btnRegresar.isHidden = false
+            btnSiguiente.isHidden = false
+        }
+        
+        lbPresion.text = sist + " / " + diast
+        lbTasa.text = String(format: "%0.5f", tasa)
         lblPulso.text = String(Int.random(in: 60..<100))
         
         btnSiguiente.layer.cornerRadius = 5
         btnOmitir.layer.cornerRadius = 5
         btnAgregar.layer.cornerRadius = 5
         
-        resultadosView.isHidden = true
+        // resultadosView.isHidden = true
     }
     
     @IBAction func btnAgregarPresion(_ sender: Any) {
@@ -52,10 +61,17 @@ class ResultadoDoctorViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextView = segue.destination as! InformacionDoctorViewController
-        nextView.sistolica = sistolica
-        nextView.diastolica = diastolica
-        nextView.pulso = String(lblPulso.text!)
+        if segue.identifier == "siguiente" {
+            let nextView = segue.destination as! TransisViewController
+            nextView.sist = sist
+            nextView.diast = diast
+            nextView.pulso = String(lblPulso.text!)
+        } else {
+            let returnView = segue.destination as! CalcularViewController
+            returnView.tipoUsuario = self.tipoUsuario
+        }
+        
+        
     }
     
     /*

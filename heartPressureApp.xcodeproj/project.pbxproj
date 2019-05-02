@@ -10,11 +10,8 @@
 		02B660C50C3ADE14575E41A1 /* Pods_heartPressureAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3890B33221E215B404A7C08A /* Pods_heartPressureAppUITests.framework */; };
 		0D3F72D0219D075C00E05637 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3F72CF219D075C00E05637 /* PopOverViewController.swift */; };
 		0D461D0C2170F6C000A4BC47 /* CalcularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D0B2170F6C000A4BC47 /* CalcularViewController.swift */; };
-		0D461D0E217100C600A4BC47 /* BarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D0D217100C600A4BC47 /* BarometroViewController.swift */; };
 		0D461D102171074300A4BC47 /* ResultadoDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D0F2171074300A4BC47 /* ResultadoDoctorViewController.swift */; };
-		0D461D12217107DF00A4BC47 /* ResultadoPacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D11217107DF00A4BC47 /* ResultadoPacienteViewController.swift */; };
 		0D461D14217113C500A4BC47 /* InformacionDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D13217113C500A4BC47 /* InformacionDoctorViewController.swift */; };
-		0D461D16217113E800A4BC47 /* InformacionPacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D461D15217113E800A4BC47 /* InformacionPacienteViewController.swift */; };
 		0D6945B321685E6000A72166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945B221685E6000A72166 /* AppDelegate.swift */; };
 		0D6945B521685E6000A72166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945B421685E6000A72166 /* ViewController.swift */; };
 		0D6945B821685E6000A72166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6945B621685E6000A72166 /* Main.storyboard */; };
@@ -22,11 +19,12 @@
 		0D6945BD21685E6100A72166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6945BB21685E6100A72166 /* LaunchScreen.storyboard */; };
 		0D6945C821685E6100A72166 /* heartPressureAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945C721685E6100A72166 /* heartPressureAppTests.swift */; };
 		0D6945D321685E6100A72166 /* heartPressureAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6945D221685E6100A72166 /* heartPressureAppUITests.swift */; };
-		0DEA0AE12188EEE70028579F /* OpcionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA0AE02188EEE70028579F /* OpcionesViewController.swift */; };
 		11DD62F17CE4279E4D6125C7 /* Pods_heartPressureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F180B3851FD34CD7F2D361 /* Pods_heartPressureApp.framework */; };
 		1C2A948A2CB279C4FDBD2379 /* Pods_heartPressureAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DE7BAF1BED1892F119FEAA /* Pods_heartPressureAppTests.framework */; };
 		39462E3C2191573C0028462E /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39462E3B2191573C0028462E /* Registro.storyboard */; };
 		39462E3E219157730028462E /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462E3D219157730028462E /* RegistroViewController.swift */; };
+		50D60F26227A66210020F6BD /* TransisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D60F25227A66210020F6BD /* TransisViewController.swift */; };
+		50D60F28227A6D330020F6BD /* BarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D60F27227A6D330020F6BD /* BarometroViewController.swift */; };
 		A24651822192611A0052931B /* TestsApp.csv in Resources */ = {isa = PBXBuildFile; fileRef = A24651812192611A0052931B /* TestsApp.csv */; };
 		A277CF152193863C00474982 /* TestsApp1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF132193863B00474982 /* TestsApp1.csv */; };
 		A277CF162193863C00474982 /* TestsApp2.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF142193863B00474982 /* TestsApp2.csv */; };
@@ -58,11 +56,8 @@
 /* Begin PBXFileReference section */
 		0D3F72CF219D075C00E05637 /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		0D461D0B2170F6C000A4BC47 /* CalcularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcularViewController.swift; sourceTree = "<group>"; };
-		0D461D0D217100C600A4BC47 /* BarometroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarometroViewController.swift; sourceTree = "<group>"; };
 		0D461D0F2171074300A4BC47 /* ResultadoDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoDoctorViewController.swift; sourceTree = "<group>"; };
-		0D461D11217107DF00A4BC47 /* ResultadoPacienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoPacienteViewController.swift; sourceTree = "<group>"; };
 		0D461D13217113C500A4BC47 /* InformacionDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionDoctorViewController.swift; sourceTree = "<group>"; };
-		0D461D15217113E800A4BC47 /* InformacionPacienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionPacienteViewController.swift; sourceTree = "<group>"; };
 		0D6945AF21685E6000A72166 /* heartPressureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heartPressureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6945B221685E6000A72166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D6945B421685E6000A72166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +71,6 @@
 		0D6945CE21685E6100A72166 /* heartPressureAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heartPressureAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6945D221685E6100A72166 /* heartPressureAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartPressureAppUITests.swift; sourceTree = "<group>"; };
 		0D6945D421685E6100A72166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DEA0AE02188EEE70028579F /* OpcionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcionesViewController.swift; sourceTree = "<group>"; };
 		2F1375C916A330B6A2F62FA0 /* Pods-heartPressureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp.release.xcconfig"; sourceTree = "<group>"; };
 		32E24C221C101E5F20A338FD /* Pods-heartPressureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureApp/Pods-heartPressureApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3890B33221E215B404A7C08A /* Pods_heartPressureAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartPressureAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +78,8 @@
 		39462E3D219157730028462E /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		42DE7BAF1BED1892F119FEAA /* Pods_heartPressureAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartPressureAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459729CDF5893A8DBFCA1A9C /* Pods-heartPressureAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppTests/Pods-heartPressureAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		50D60F25227A66210020F6BD /* TransisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransisViewController.swift; sourceTree = "<group>"; };
+		50D60F27227A6D330020F6BD /* BarometroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarometroViewController.swift; sourceTree = "<group>"; };
 		59F180B3851FD34CD7F2D361 /* Pods_heartPressureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heartPressureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		915078858E514FE9EC8A9352 /* Pods-heartPressureAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppUITests/Pods-heartPressureAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A24651812192611A0052931B /* TestsApp.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestsApp.csv; sourceTree = "<group>"; };
@@ -156,7 +152,9 @@
 				A24651812192611A0052931B /* TestsApp.csv */,
 				0D6945B221685E6000A72166 /* AppDelegate.swift */,
 				0D6945B421685E6000A72166 /* ViewController.swift */,
+				50D60F27227A6D330020F6BD /* BarometroViewController.swift */,
 				0D6945B621685E6000A72166 /* Main.storyboard */,
+				50D60F25227A66210020F6BD /* TransisViewController.swift */,
 				FBA690822278D20800F29557 /* ListaPacientesViewController.swift */,
 				FBDB74D32277A782003F1272 /* GoogleService-Info.plist */,
 				FB8B84192272136F0048A702 /* gaugeView.swift */,
@@ -165,12 +163,8 @@
 				A277CF142193863B00474982 /* TestsApp2.csv */,
 				39462E3B2191573C0028462E /* Registro.storyboard */,
 				39462E3D219157730028462E /* RegistroViewController.swift */,
-				0DEA0AE02188EEE70028579F /* OpcionesViewController.swift */,
-				0D461D15217113E800A4BC47 /* InformacionPacienteViewController.swift */,
 				0D461D13217113C500A4BC47 /* InformacionDoctorViewController.swift */,
-				0D461D11217107DF00A4BC47 /* ResultadoPacienteViewController.swift */,
 				0D461D0F2171074300A4BC47 /* ResultadoDoctorViewController.swift */,
-				0D461D0D217100C600A4BC47 /* BarometroViewController.swift */,
 				0D461D0B2170F6C000A4BC47 /* CalcularViewController.swift */,
 				0D6945B921685E6100A72166 /* Assets.xcassets */,
 				0D6945BB21685E6100A72166 /* LaunchScreen.storyboard */,
@@ -497,19 +491,17 @@
 				0D461D14217113C500A4BC47 /* InformacionDoctorViewController.swift in Sources */,
 				0D461D0C2170F6C000A4BC47 /* CalcularViewController.swift in Sources */,
 				FBA690892278E7F800F29557 /* CustomTableViewCell.swift in Sources */,
-				0D461D12217107DF00A4BC47 /* ResultadoPacienteViewController.swift in Sources */,
 				39462E3E219157730028462E /* RegistroViewController.swift in Sources */,
 				0D3F72D0219D075C00E05637 /* PopOverViewController.swift in Sources */,
 				0D461D102171074300A4BC47 /* ResultadoDoctorViewController.swift in Sources */,
+				50D60F28227A6D330020F6BD /* BarometroViewController.swift in Sources */,
 				FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */,
 				FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */,
 				0D6945B521685E6000A72166 /* ViewController.swift in Sources */,
 				FBA690832278D20800F29557 /* ListaPacientesViewController.swift in Sources */,
 				FBA690872278E73B00F29557 /* MedicionesTableViewController.swift in Sources */,
-				0D461D0E217100C600A4BC47 /* BarometroViewController.swift in Sources */,
-				0DEA0AE12188EEE70028579F /* OpcionesViewController.swift in Sources */,
 				0D6945B321685E6000A72166 /* AppDelegate.swift in Sources */,
-				0D461D16217113E800A4BC47 /* InformacionPacienteViewController.swift in Sources */,
+				50D60F26227A66210020F6BD /* TransisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

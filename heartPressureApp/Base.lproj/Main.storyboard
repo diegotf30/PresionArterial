@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r8N-1h-HTH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jRg-32-w8Z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LyY-zK-Ikb" kind="presentation" id="sbt-E2-Am6"/>
+                                    <segue destination="r8N-1h-HTH" kind="show" identifier="barometro" id="CfO-j4-ybv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-kR-qEH">
@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-177" y="-664"/>
+            <point key="canvasLocation" x="-210" y="-682"/>
         </scene>
         <!--Pop Over View Controller-->
         <scene sceneID="J21-xW-bvG">
@@ -71,8 +71,11 @@
                                 <rect key="frame" x="19" y="10" width="297" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">'HeartPressure' ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Enero Mayo 2019, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.
-Desarrolladores:
-'HeartPressure' se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
+Desarrolladores: 
+- Iván Contreras
+- Diego Treviño
+- Samuel Castillo
+'HeartPressure' se encuentra en desarrollo y se realizó con fines académicos.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -111,11 +114,12 @@ Desarrolladores:
                     </view>
                     <connections>
                         <outlet property="viewChart" destination="O37-wR-aB6" id="unI-5K-8q6"/>
+                        <segue destination="ZQH-lk-1OP" kind="presentation" identifier="vistaDoc" id="mF0-VL-qaA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6n-2w-eyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="114.69265367316342"/>
+            <point key="canvasLocation" x="1046" y="-664"/>
         </scene>
         <!--Registro-->
         <scene sceneID="pum-P9-nP8">
@@ -139,21 +143,6 @@ Desarrolladores:
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmz-0W-XSF">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD9-kS-AdZ">
-                                                <rect key="frame" x="81" y="490" width="207" height="34"/>
-                                                <color key="backgroundColor" red="0.098039215686274508" green="0.59999999999999998" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="34" id="iWj-xh-b3H"/>
-                                                    <constraint firstAttribute="width" constant="207" id="meF-XU-X3e"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Ingresar">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="signInBtn:" destination="15n-yj-ZZb" eventType="touchUpInside" id="NJr-Gi-nS7"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-FE-4RV">
                                                 <rect key="frame" x="81" y="289" width="143" height="22"/>
                                                 <constraints>
@@ -217,13 +206,33 @@ Desarrolladores:
                                                     <action selector="signOutGoogle:" destination="15n-yj-ZZb" eventType="touchUpInside" id="Vbf-Ku-p5w"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-uN-9Pp">
-                                                <rect key="frame" x="0.0" y="549" width="375" height="47"/>
-                                            </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-k8-H8R">
+                                                <rect key="frame" x="81" y="483" width="207" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="Doctor"/>
+                                                    <segment title="Paciente"/>
+                                                </segments>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </segmentedControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CD9-kS-AdZ">
+                                                <rect key="frame" x="81" y="549" width="207" height="34"/>
+                                                <color key="backgroundColor" red="0.098039215686274508" green="0.59999999999999998" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="iWj-xh-b3H"/>
+                                                    <constraint firstAttribute="width" constant="207" id="meF-XU-X3e"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal" title="Ingresar">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signInBtn:" destination="15n-yj-ZZb" eventType="touchUpInside" id="NJr-Gi-nS7"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="rpn-uN-9Pp" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" id="3qy-rw-5sf"/>
                                             <constraint firstAttribute="trailing" secondItem="6N8-B9-nvp" secondAttribute="trailing" constant="84" id="5Yi-ri-iTL"/>
                                             <constraint firstAttribute="trailing" secondItem="dwb-6w-Xna" secondAttribute="trailing" constant="24" id="754-cu-UW8"/>
                                             <constraint firstItem="CD9-kS-AdZ" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="87I-GR-NZ1"/>
@@ -231,28 +240,24 @@ Desarrolladores:
                                             <constraint firstItem="JSs-Fb-dUz" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="8bV-vf-2Ef"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p41-d1-Gth" secondAttribute="trailing" constant="20" symbolic="YES" id="9Dk-Xb-thN"/>
                                             <constraint firstItem="ztM-yu-yYv" firstAttribute="top" secondItem="nzt-FE-4RV" secondAttribute="bottom" constant="8" id="ACr-uD-xGO"/>
-                                            <constraint firstItem="CD9-kS-AdZ" firstAttribute="top" secondItem="JSs-Fb-dUz" secondAttribute="bottom" constant="49" id="CEj-Gc-h7C"/>
+                                            <constraint firstItem="CD9-kS-AdZ" firstAttribute="top" secondItem="JSs-Fb-dUz" secondAttribute="bottom" constant="108" id="CEj-Gc-h7C"/>
                                             <constraint firstItem="p41-d1-Gth" firstAttribute="top" secondItem="ztM-yu-yYv" secondAttribute="bottom" constant="32" id="DWs-xK-z77"/>
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="centerX" secondItem="JSs-Fb-dUz" secondAttribute="centerX" id="GTC-OF-AgC"/>
                                             <constraint firstAttribute="trailing" secondItem="ztM-yu-yYv" secondAttribute="trailing" constant="87" id="Jlc-rm-A3A"/>
-                                            <constraint firstItem="rpn-uN-9Pp" firstAttribute="centerY" secondItem="Dmz-0W-XSF" secondAttribute="centerY" constant="239" id="N9y-g7-vlv"/>
                                             <constraint firstItem="JSs-Fb-dUz" firstAttribute="top" secondItem="p41-d1-Gth" secondAttribute="bottom" constant="8" id="PF7-Pw-tYi"/>
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="107" id="PQO-ZN-qez"/>
                                             <constraint firstAttribute="height" constant="667" id="PmC-Hq-sP5"/>
                                             <constraint firstItem="nzt-FE-4RV" firstAttribute="top" secondItem="6N8-B9-nvp" secondAttribute="bottom" constant="50" id="Tu3-XB-ycj"/>
-                                            <constraint firstItem="nzu-Yw-nkM" firstAttribute="top" secondItem="rpn-uN-9Pp" secondAttribute="bottom" constant="14" id="Uis-5L-Loh"/>
                                             <constraint firstItem="p41-d1-Gth" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="VEx-2a-GTg"/>
-                                            <constraint firstAttribute="trailing" secondItem="rpn-uN-9Pp" secondAttribute="trailing" id="Wnn-uP-Gj5"/>
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="bottom" secondItem="Dmz-0W-XSF" secondAttribute="bottomMargin" constant="-19" id="WxX-IP-ApL"/>
                                             <constraint firstItem="6N8-B9-nvp" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="84" id="arR-nF-Cmi"/>
-                                            <constraint firstAttribute="bottom" secondItem="CD9-kS-AdZ" secondAttribute="bottom" constant="143" id="c8e-2k-we7"/>
+                                            <constraint firstAttribute="bottom" secondItem="CD9-kS-AdZ" secondAttribute="bottom" constant="84" id="c8e-2k-we7"/>
                                             <constraint firstItem="dwb-6w-Xna" firstAttribute="top" secondItem="Dmz-0W-XSF" secondAttribute="topMargin" id="dr1-Tr-dPr"/>
                                             <constraint firstItem="6N8-B9-nvp" firstAttribute="top" secondItem="Dmz-0W-XSF" secondAttribute="top" constant="66" id="fcw-my-2iq"/>
                                             <constraint firstAttribute="trailing" secondItem="CD9-kS-AdZ" secondAttribute="trailing" constant="87" id="hrN-M2-IY2"/>
                                             <constraint firstAttribute="trailing" secondItem="JSs-Fb-dUz" secondAttribute="trailing" constant="87" id="isI-gT-8Kr"/>
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="centerX" secondItem="ztM-yu-yYv" secondAttribute="centerX" id="lie-2s-743"/>
                                             <constraint firstItem="nzt-FE-4RV" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="q5A-ce-weM"/>
-                                            <constraint firstItem="rpn-uN-9Pp" firstAttribute="centerX" secondItem="Dmz-0W-XSF" secondAttribute="centerX" id="wz6-Qz-vmn"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nzt-FE-4RV" secondAttribute="trailing" constant="20" symbolic="YES" id="xZS-6c-3sh"/>
                                             <constraint firstItem="ztM-yu-yYv" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="zWX-Ri-ahA"/>
                                         </constraints>
@@ -284,11 +289,11 @@ Desarrolladores:
                         <outlet property="btnIngresar" destination="CD9-kS-AdZ" id="gcc-7c-w0Y"/>
                         <outlet property="btnRegistrar" destination="nzu-Yw-nkM" id="w8x-AJ-Zmm"/>
                         <outlet property="datosView" destination="Dmz-0W-XSF" id="TA6-yZ-uog"/>
-                        <outlet property="googleView" destination="rpn-uN-9Pp" id="h8H-dm-dOm"/>
                         <outlet property="scrollView" destination="uRa-4O-Ps8" id="P2t-We-I2i"/>
                         <outlet property="tapGesture" destination="489-98-J3e" id="QTZ-lh-N1N"/>
                         <outlet property="tfMail" destination="ztM-yu-yYv" id="M3g-H2-OFi"/>
                         <outlet property="tfPsswd" destination="JSs-Fb-dUz" id="lcm-67-AT6"/>
+                        <outlet property="userType" destination="aiB-k8-H8R" id="rLm-vQ-1CF"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="signin" id="BnR-NA-MFK"/>
                     </connections>
                 </viewController>
@@ -300,95 +305,6 @@ Desarrolladores:
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1183" y="-682"/>
-        </scene>
-        <!--Barometro View Controller-->
-        <scene sceneID="3sw-k8-rPV">
-            <objects>
-                <viewController id="LyY-zK-Ikb" customClass="BarometroViewController" customModule="heartPressureApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b1W-5V-0bg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79H-ho-SjV">
-                                <rect key="frame" x="121" y="293" width="133" height="81"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="79H-ho-SjV" firstAttribute="centerX" secondItem="b1W-5V-0bg" secondAttribute="centerX" id="A7Q-mg-rsR"/>
-                            <constraint firstItem="79H-ho-SjV" firstAttribute="leading" secondItem="Cba-gY-5Q6" secondAttribute="leading" constant="121" id="I8r-aw-ry5"/>
-                            <constraint firstItem="79H-ho-SjV" firstAttribute="centerY" secondItem="b1W-5V-0bg" secondAttribute="centerY" id="axS-1Q-5LB"/>
-                            <constraint firstItem="79H-ho-SjV" firstAttribute="top" secondItem="Cba-gY-5Q6" secondAttribute="top" constant="273" id="wVp-dL-1qN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Cba-gY-5Q6"/>
-                    </view>
-                    <connections>
-                        <outlet property="lblPercent" destination="79H-ho-SjV" id="hbn-7W-XtP"/>
-                        <segue destination="hdj-wo-BPS" kind="presentation" identifier="opcion" id="2th-iq-qIy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JKv-kn-DA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="814" y="-664"/>
-        </scene>
-        <!--Opciones View Controller-->
-        <scene sceneID="1vF-mu-4y2">
-            <objects>
-                <viewController id="hdj-wo-BPS" customClass="OpcionesViewController" customModule="heartPressureApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mTK-rB-ZaN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="00T-Ws-TQ9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="646"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJl-UK-WHh">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="322.5"/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.59999999999999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
-                                        <state key="normal" title="Calcular presión">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnCalcular:" destination="hdj-wo-BPS" eventType="touchUpInside" id="aNA-du-Yn5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5E-HA-6iK">
-                                        <rect key="frame" x="0.0" y="323.5" width="375" height="322.5"/>
-                                        <color key="backgroundColor" red="0.098039215690000001" green="0.59999999999999998" blue="0.68235294120000001" alpha="0.4921339897260274" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
-                                        <state key="normal" title="Ver resultados">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnResultados:" destination="hdj-wo-BPS" eventType="touchUpInside" id="2cK-RW-585"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="L5E-HA-6iK" firstAttribute="height" secondItem="gJl-UK-WHh" secondAttribute="height" id="uph-24-UU1"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rxr-Rj-rUb" firstAttribute="bottom" secondItem="00T-Ws-TQ9" secondAttribute="bottom" constant="1" id="77M-Sc-Aem"/>
-                            <constraint firstItem="00T-Ws-TQ9" firstAttribute="leading" secondItem="rxr-Rj-rUb" secondAttribute="leading" id="TWI-dt-FMz"/>
-                            <constraint firstItem="00T-Ws-TQ9" firstAttribute="top" secondItem="rxr-Rj-rUb" secondAttribute="top" id="aMv-m1-JfV"/>
-                            <constraint firstItem="rxr-Rj-rUb" firstAttribute="trailing" secondItem="00T-Ws-TQ9" secondAttribute="trailing" id="ilt-Cd-R5R"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="rxr-Rj-rUb"/>
-                    </view>
-                    <connections>
-                        <segue destination="ZQH-lk-1OP" kind="presentation" identifier="doctor" id="jJ9-cF-62A"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7wJ-Nt-l1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1815" y="-664"/>
         </scene>
         <!--Resultado Doctor View Controller-->
         <scene sceneID="xiX-5n-iDz">
@@ -552,7 +468,7 @@ Desarrolladores:
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6M-Yk-zXY">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6M-Yk-zXY">
                                                         <rect key="frame" x="241" y="444" width="87" height="33"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -561,7 +477,7 @@ Desarrolladores:
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="Siguiente"/>
                                                         <connections>
-                                                            <segue destination="jRg-32-w8Z" kind="show" id="qqp-6W-Kzw"/>
+                                                            <segue destination="jRg-32-w8Z" kind="show" identifier="siguiente" id="qqp-6W-Kzw"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Tasa de desinflado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-bt-F3j">
@@ -595,6 +511,18 @@ Desarrolladores:
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBk-jk-e3Z">
+                                                        <rect key="frame" x="32" y="444" width="87" height="33"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="87" id="YoG-Va-eY6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="Regresar"/>
+                                                        <connections>
+                                                            <segue destination="BYZ-38-t0r" kind="show" id="rYV-Xt-zPJ"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -616,6 +544,7 @@ Desarrolladores:
                                                     <constraint firstItem="Nva-bw-lHP" firstAttribute="top" secondItem="RwV-G3-pzC" secondAttribute="top" constant="208" id="K6W-Yb-q0b"/>
                                                     <constraint firstItem="ItE-bt-F3j" firstAttribute="leading" secondItem="zDJ-8g-EVd" secondAttribute="leading" id="OAf-z5-rwS"/>
                                                     <constraint firstAttribute="trailing" secondItem="fIZ-us-7te" secondAttribute="trailing" constant="20" id="TPF-70-d0F"/>
+                                                    <constraint firstAttribute="bottom" secondItem="QBk-jk-e3Z" secondAttribute="bottom" constant="74" id="Ugu-4v-AMn"/>
                                                     <constraint firstItem="zDJ-8g-EVd" firstAttribute="top" secondItem="P6f-Hv-qT4" secondAttribute="bottom" constant="45" id="W6L-T0-h8O"/>
                                                     <constraint firstAttribute="bottom" secondItem="zDJ-8g-EVd" secondAttribute="bottom" constant="143" id="WuT-Dh-fRO"/>
                                                     <constraint firstItem="Hgz-6B-RXA" firstAttribute="leading" secondItem="RwV-G3-pzC" secondAttribute="leading" constant="32" id="ZYC-gg-WST"/>
@@ -634,6 +563,7 @@ Desarrolladores:
                                                     <constraint firstItem="9kx-Q5-rOC" firstAttribute="top" secondItem="bgH-pd-K2t" secondAttribute="bottom" constant="8" symbolic="YES" id="swf-bY-3KC"/>
                                                     <constraint firstItem="bgH-pd-K2t" firstAttribute="trailing" secondItem="9kx-Q5-rOC" secondAttribute="trailing" id="tPG-JV-Ego"/>
                                                     <constraint firstItem="Otk-Vn-zSR" firstAttribute="leading" secondItem="ItE-bt-F3j" secondAttribute="trailing" constant="28" id="uem-qJ-5w9"/>
+                                                    <constraint firstItem="QBk-jk-e3Z" firstAttribute="leading" secondItem="RwV-G3-pzC" secondAttribute="leading" constant="32" id="xIj-QT-yXc"/>
                                                     <constraint firstItem="Nva-bw-lHP" firstAttribute="top" secondItem="fIZ-us-7te" secondAttribute="bottom" constant="31" id="zwP-zg-Fis"/>
                                                 </constraints>
                                             </view>
@@ -681,6 +611,7 @@ Desarrolladores:
                     <connections>
                         <outlet property="btnAgregar" destination="Z54-cD-qpc" id="Nw1-dB-0Fa"/>
                         <outlet property="btnOmitir" destination="nZX-bA-Z5W" id="GK0-Pj-aRT"/>
+                        <outlet property="btnRegresar" destination="QBk-jk-e3Z" id="d5m-Mr-KfK"/>
                         <outlet property="btnSiguiente" destination="v6M-Yk-zXY" id="Dlj-I8-KkE"/>
                         <outlet property="datosView" destination="zQ3-sJ-W5p" id="kdX-SO-1Cp"/>
                         <outlet property="lbPresion" destination="bgH-pd-K2t" id="iD5-OU-5xk"/>
@@ -696,12 +627,12 @@ Desarrolladores:
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2002" y="-1885"/>
+            <point key="canvasLocation" x="1476" y="-1678"/>
         </scene>
-        <!--View Controller-->
+        <!--Transis View Controller-->
         <scene sceneID="u8M-UK-do6">
             <objects>
-                <viewController id="jRg-32-w8Z" sceneMemberID="viewController">
+                <viewController id="jRg-32-w8Z" customClass="TransisViewController" customModule="heartPressureApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xgS-79-6eD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -715,8 +646,8 @@ Desarrolladores:
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnCalcular:" destination="hdj-wo-BPS" eventType="touchUpInside" id="bVe-uh-M6x"/>
-                                    <segue destination="Kci-Zh-rGJ" kind="show" id="zWa-KF-ckU"/>
+                                    <action selector="onButtonTouch:" destination="jRg-32-w8Z" eventType="touchUpInside" id="VdP-Ti-yai"/>
+                                    <segue destination="Kci-Zh-rGJ" kind="show" identifier="search" id="zWa-KF-ckU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5py-Tr-1hr">
@@ -728,8 +659,7 @@ Desarrolladores:
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnResultados:" destination="hdj-wo-BPS" eventType="touchUpInside" id="wCe-pF-nej"/>
-                                    <segue destination="mzF-kD-A5Z" kind="show" id="Boy-Ud-AkJ"/>
+                                    <segue destination="mzF-kD-A5Z" kind="show" identifier="resultados" id="Boy-Ud-AkJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿El paciente ya existe?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpG-gx-S5U">
@@ -746,7 +676,7 @@ Desarrolladores:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Q0-8r-oWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3289" y="-2622"/>
+            <point key="canvasLocation" x="3556" y="-1256"/>
         </scene>
         <!--Lista Pacientes View Controller-->
         <scene sceneID="F3p-Ju-K3v">
@@ -776,10 +706,22 @@ Desarrolladores:
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pV5-rh-otE">
-                                <rect key="frame" x="16" y="55" width="343" height="44"/>
+                                <rect key="frame" x="16" y="70" width="343" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNW-A1-SzL">
+                                <rect key="frame" x="16" y="20" width="40" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRegresar:" destination="Kci-Zh-rGJ" eventType="touchUpInside" id="wTc-Xq-1ZK"/>
+                                    <action selector="btnRegresar:" destination="mzF-kD-A5Z" eventType="touchUpInside" id="wc1-Mt-iLd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z0K-wa-E90"/>
@@ -791,7 +733,7 @@ Desarrolladores:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMM-0o-l0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3237.5999999999999" y="-1818.440779610195"/>
+            <point key="canvasLocation" x="3505" y="-452"/>
         </scene>
         <!--Informacion Doctor View Controller-->
         <scene sceneID="0YF-qn-gp0">
@@ -1109,7 +1051,7 @@ Desarrolladores:
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4352.8000000000002" y="-1863.4182908545729"/>
+            <point key="canvasLocation" x="4620" y="-497"/>
         </scene>
         <!--Registro View Controller-->
         <scene sceneID="0V4-iM-Ovb">
@@ -1266,6 +1208,6 @@ Desarrolladores:
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MGS-iq-I9E"/>
+        <segue reference="BnR-NA-MFK"/>
     </inferredMetricsTieBreakers>
 </document>

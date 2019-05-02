@@ -19,6 +19,8 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
     var listaNombres = [String]()
     var tempNombre = [String]()
     var i = 0
+    var tipoUsuario : String!
+    
     @IBOutlet weak var tbView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -56,6 +58,10 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         tfSearch.addTarget(self, action: #selector(ListaPacientesViewController.textFieldDidChange(_:)), for: .editingChanged)
         // Do any additional setup after loading the view.
         */
+    }
+    
+    @IBAction func btnRegresar(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     func getCollection() {

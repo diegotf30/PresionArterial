@@ -208,11 +208,11 @@ class BarometroViewController: UIViewController {
     
     //SEGUE
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vistaOp = segue.destination as! OpcionesViewController
+        /*let vistaOp = segue.destination as! OpcionesViewController
         vistaOp.tasa = tasaDesinflado
         vistaOp.sist = String(format: "%0.0f", sist)
         vistaOp.diast = String(format: "%0.0f", diast)
-        vistaOp.tipoUsuario = self.tipoUsuario
+        vistaOp.tipoUsuario = self.tipoUsuario*/
     }
     
 

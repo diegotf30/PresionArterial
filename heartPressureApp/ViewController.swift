@@ -21,7 +21,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     @IBOutlet weak var btnRegistrar: UIButton!
     @IBOutlet weak var googleView: UIView!
+    @IBOutlet weak var userType: UISegmentedControl!
     
+    var tipoUsuario : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +35,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
         tfMail.delegate = self
         tfPsswd.delegate = self
 
-        let googleButton = GIDSignInButton()
-        
-        googleButton.frame = CGRect(x:0, y: 0, width: 100, height: btnIngresar.frame.height)
-        googleButton.center = googleView.center
-        datosView.addSubview(googleButton)
-        GIDSignIn.sharedInstance()?.uiDelegate = self
     }
 
     @IBAction func quitaTeclado(_ sender: Any) {
@@ -59,14 +55,24 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
                 print("Failed to sign in to Firebase", err)
                 return
             }
+            
+            if self.userType.selectedSegmentIndex == 0 {
+                //Doctor
+                self.tipoUsuario = "Doctor"
+            }else{
+                //Paciente
+                self.tipoUsuario = "Paciente"
+            }
+            
             self.performSegue(withIdentifier: "signin", sender: nil)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "signin"{
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.usuario = tfMail.text!
+            let calularView = segue.destination as! CalcularViewController
+            // appDelegate.usuario = tfMail.text!
+            calularView.tipoUsuario = self.tipoUsuario
         }
         
     }
