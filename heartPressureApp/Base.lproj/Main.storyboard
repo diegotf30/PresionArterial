@@ -1253,7 +1253,6 @@ Desarrolladores:
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CfO-j4-ybv"/>
         <segue reference="rYV-Xt-zPJ"/>
     </inferredMetricsTieBreakers>
 </document>

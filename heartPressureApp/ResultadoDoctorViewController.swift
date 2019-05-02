@@ -32,9 +32,9 @@ class ResultadoDoctorViewController: UIViewController {
         
         print(tipoUsuario)
         
-        if(self.tipoUsuario == "Paciente"){
+        if(tipoUsuario == "Paciente"){
             btnRegresar.isHidden = false
-        } else if (self.tipoUsuario == "Docotor"){
+        } else if (tipoUsuario == "Doctor"){
             btnRegresar.isHidden = false
             btnSiguiente.isHidden = false
         }

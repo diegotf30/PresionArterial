@@ -17,12 +17,11 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
     var inicioSesion : Bool! = false
     var ref: DatabaseReference!
     var databaseHande : DatabaseHandle!
-    var userType : String!
     var tipoUsuario: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(tipoUsuario)
+        
         btnCalcular.layer.cornerRadius = 0.34 * btnCalcular.bounds.size.width
         
         /*
