@@ -13,6 +13,7 @@ class AnimacionBarometroViewController: UIViewController {
     
     @IBOutlet weak var lblPercent: UILabel!
     @IBOutlet weak var viewChart: LineChartView!
+    @IBOutlet weak var viewBarometro: UIView!
     
     let shapeLayer = CAShapeLayer()
     var tipoUsuario : String!
@@ -37,16 +38,14 @@ class AnimacionBarometroViewController: UIViewController {
     let pressureWarning = 140.0
     
     // Original X: 10, Y: 10
-    let test = GaugeView(frame: CGRect(x: 10, y: 10, width: 256, height: 256))
+    let test = GaugeView(frame: CGRect(x: 0, y: 0, width: 256, height: 256))
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+
         test.backgroundColor = .clear
-        test.center = CGPoint(x: view.frame.size.width  / 2, y: view.frame.size.height / 2 - 180)
-        view.addSubview(test)
+        viewBarometro.addSubview(test)
         
         var data = readDataFromCSV(fileName: "TestsApp2", fileType: "csv")
         data = cleanRows(file: data!)
@@ -69,7 +68,13 @@ class AnimacionBarometroViewController: UIViewController {
         if(row + 2 == n){
             tiempo.invalidate()
             sleep(1)
-            self.performSegue(withIdentifier: "vistaDoc", sender: nil)
+            if(tipoUsuario == "Paciente"){
+                self.performSegue(withIdentifier: "vistaPat", sender: nil)
+            }
+            else if(tipoUsuario == "Doctor"){
+                self.performSegue(withIdentifier: "vistaDoc", sender: nil)
+            }
+            
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 1) {
@@ -192,6 +197,13 @@ class AnimacionBarometroViewController: UIViewController {
             vistaOp.sist = String(format: "%0.0f", sist)
             vistaOp.diast = String(format: "%0.0f", diast)
             vistaOp.tipoUsuario = self.tipoUsuario
+        }
+        else if segue.identifier == "vistaPatient" {
+            let vistaM = segue.destination as! ResultadoDoctorViewController
+            vistaM.tasa = tasaDesinflado
+            vistaM.sist = String(format: "%0.0f", sist)
+            vistaM.diast = String(format: "%0.0f", diast)
+            vistaM.tipoUsuario = self.tipoUsuario
         }
     }
 }

@@ -28,6 +28,7 @@
 		A24651822192611A0052931B /* TestsApp.csv in Resources */ = {isa = PBXBuildFile; fileRef = A24651812192611A0052931B /* TestsApp.csv */; };
 		A277CF152193863C00474982 /* TestsApp1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF132193863B00474982 /* TestsApp1.csv */; };
 		A277CF162193863C00474982 /* TestsApp2.csv in Resources */ = {isa = PBXBuildFile; fileRef = A277CF142193863B00474982 /* TestsApp2.csv */; };
+		FB78CDE8227BA34B009CEE76 /* ManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78CDE7227BA34B009CEE76 /* ManualViewController.swift */; };
 		FB8B8418227210CC0048A702 /* AnimacionBarometroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */; };
 		FB8B841A2272136F0048A702 /* gaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8B84192272136F0048A702 /* gaugeView.swift */; };
 		FBA690832278D20800F29557 /* ListaPacientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA690822278D20800F29557 /* ListaPacientesViewController.swift */; };
@@ -87,6 +88,7 @@
 		A277CF142193863B00474982 /* TestsApp2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestsApp2.csv; sourceTree = "<group>"; };
 		E6928F238FD1405AB05AD79A /* Pods-heartPressureAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppUITests/Pods-heartPressureAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EFC1BE3719E1E512D2F11054 /* Pods-heartPressureAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heartPressureAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-heartPressureAppTests/Pods-heartPressureAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB78CDE7227BA34B009CEE76 /* ManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualViewController.swift; sourceTree = "<group>"; };
 		FB8B8417227210CB0048A702 /* AnimacionBarometroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimacionBarometroViewController.swift; sourceTree = "<group>"; };
 		FB8B84192272136F0048A702 /* gaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaugeView.swift; sourceTree = "<group>"; };
 		FBA690822278D20800F29557 /* ListaPacientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPacientesViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0D6945B421685E6000A72166 /* ViewController.swift */,
 				50D60F27227A6D330020F6BD /* BarometroViewController.swift */,
 				0D6945B621685E6000A72166 /* Main.storyboard */,
+				FB78CDE7227BA34B009CEE76 /* ManualViewController.swift */,
 				50D60F25227A66210020F6BD /* TransisViewController.swift */,
 				FBA690822278D20800F29557 /* ListaPacientesViewController.swift */,
 				FBDB74D32277A782003F1272 /* GoogleService-Info.plist */,
@@ -501,6 +504,7 @@
 				FBA690832278D20800F29557 /* ListaPacientesViewController.swift in Sources */,
 				FBA690872278E73B00F29557 /* MedicionesTableViewController.swift in Sources */,
 				0D6945B321685E6000A72166 /* AppDelegate.swift in Sources */,
+				FB78CDE8227BA34B009CEE76 /* ManualViewController.swift in Sources */,
 				50D60F26227A66210020F6BD /* TransisViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

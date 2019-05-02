@@ -26,6 +26,8 @@ class ResultadoDoctorViewController: UIViewController {
     var tasa : Double!
     var sist : String!
     var diast : String!
+    var msist : String!
+    var mdist : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
