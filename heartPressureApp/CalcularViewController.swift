@@ -61,6 +61,16 @@ class CalcularViewController: UIViewController, UIPopoverPresentationControllerD
         return .none
     }
     
+    
+    @IBAction func cerrarSesion(_ sender: UIButton) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

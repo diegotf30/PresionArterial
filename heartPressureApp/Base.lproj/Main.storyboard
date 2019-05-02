@@ -39,6 +39,14 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9k-SG-u5T">
+                                <rect key="frame" x="267" y="41" width="92" height="30"/>
+                                <state key="normal" title="Cerrar sesión"/>
+                                <connections>
+                                    <action selector="cerrarSesion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSk-MT-KVm"/>
+                                    <segue destination="15n-yj-ZZb" kind="show" id="jLU-R2-Rg9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -46,7 +54,9 @@
                             <constraint firstAttribute="bottom" secondItem="4yq-kR-qEH" secondAttribute="bottom" constant="20" symbolic="YES" id="FGo-ld-8BM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sf8-rJ-ZA0" secondAttribute="bottom" constant="184" id="FVm-IF-Kbz"/>
                             <constraint firstItem="Sf8-rJ-ZA0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="163" id="IFG-6r-Xts"/>
+                            <constraint firstItem="G9k-SG-u5T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="MEU-Sv-aCS"/>
                             <constraint firstItem="4yq-kR-qEH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eCr-Bx-SI8"/>
+                            <constraint firstItem="G9k-SG-u5T" firstAttribute="trailing" secondItem="4yq-kR-qEH" secondAttribute="trailing" id="irs-lb-2Ok"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sf8-rJ-ZA0" secondAttribute="trailing" constant="38" id="wRP-Mq-eti"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-210" y="-682"/>
+            <point key="canvasLocation" x="89" y="-1303"/>
         </scene>
         <!--Pop Over View Controller-->
         <scene sceneID="J21-xW-bvG">
@@ -194,18 +204,6 @@ Desarrolladores:
                                                     <segue destination="jyk-Xn-8dx" kind="show" id="i6w-L6-tMx"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-6w-Xna">
-                                                <rect key="frame" x="321" y="28" width="30" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="34" id="lJR-Fi-z1Q"/>
-                                                </constraints>
-                                                <state key="normal" title="X">
-                                                    <color key="titleColor" white="1" alpha="0.98218107880000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="signOutGoogle:" destination="15n-yj-ZZb" eventType="touchUpInside" id="Vbf-Ku-p5w"/>
-                                                </connections>
-                                            </button>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-k8-H8R">
                                                 <rect key="frame" x="81" y="483" width="207" height="29"/>
                                                 <constraints>
@@ -237,7 +235,6 @@ Desarrolladores:
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="6N8-B9-nvp" secondAttribute="trailing" constant="84" id="5Yi-ri-iTL"/>
-                                            <constraint firstAttribute="trailing" secondItem="dwb-6w-Xna" secondAttribute="trailing" constant="24" id="754-cu-UW8"/>
                                             <constraint firstItem="CD9-kS-AdZ" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="87I-GR-NZ1"/>
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="centerX" secondItem="CD9-kS-AdZ" secondAttribute="centerX" id="8aA-EY-LdP"/>
                                             <constraint firstItem="JSs-Fb-dUz" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="81" id="8bV-vf-2Ef"/>
@@ -256,7 +253,6 @@ Desarrolladores:
                                             <constraint firstItem="nzu-Yw-nkM" firstAttribute="bottom" secondItem="Dmz-0W-XSF" secondAttribute="bottomMargin" constant="-19" id="WxX-IP-ApL"/>
                                             <constraint firstItem="6N8-B9-nvp" firstAttribute="leading" secondItem="Dmz-0W-XSF" secondAttribute="leading" constant="84" id="arR-nF-Cmi"/>
                                             <constraint firstAttribute="bottom" secondItem="CD9-kS-AdZ" secondAttribute="bottom" constant="84" id="c8e-2k-we7"/>
-                                            <constraint firstItem="dwb-6w-Xna" firstAttribute="top" secondItem="Dmz-0W-XSF" secondAttribute="topMargin" id="dr1-Tr-dPr"/>
                                             <constraint firstItem="6N8-B9-nvp" firstAttribute="top" secondItem="Dmz-0W-XSF" secondAttribute="top" constant="66" id="fcw-my-2iq"/>
                                             <constraint firstAttribute="trailing" secondItem="CD9-kS-AdZ" secondAttribute="trailing" constant="87" id="hrN-M2-IY2"/>
                                             <constraint firstAttribute="trailing" secondItem="JSs-Fb-dUz" secondAttribute="trailing" constant="87" id="isI-gT-8Kr"/>
@@ -1253,6 +1249,6 @@ Desarrolladores:
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rYV-Xt-zPJ"/>
+        <segue reference="Yib-qm-oP9"/>
     </inferredMetricsTieBreakers>
 </document>
