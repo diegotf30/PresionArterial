@@ -69,7 +69,7 @@ class AnimacionBarometroViewController: UIViewController {
             tiempo.invalidate()
             sleep(1)
             if(tipoUsuario == "Paciente"){
-                self.performSegue(withIdentifier: "vistaPat", sender: nil)
+                self.performSegue(withIdentifier: "vistaPatient", sender: nil)
             }
             else if(tipoUsuario == "Doctor"){
                 self.performSegue(withIdentifier: "vistaDoc", sender: nil)
@@ -192,8 +192,8 @@ class AnimacionBarometroViewController: UIViewController {
     //SEGUE
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "vistaDoc" {
-            let vistaOp = segue.destination as! ResultadoDoctorViewController
-            vistaOp.tasa = tasaDesinflado
+            let vistaOp = segue.destination as! ManualViewController
+            vistaOp.tasaDesinflado = tasaDesinflado
             vistaOp.sist = String(format: "%0.0f", sist)
             vistaOp.diast = String(format: "%0.0f", diast)
             vistaOp.tipoUsuario = self.tipoUsuario
