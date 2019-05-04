@@ -225,7 +225,7 @@ class GaugeView: UIView {
         needle.center = CGPoint(x: bounds.midX, y: bounds.midY)
         addSubview(needle)
         
-        valueLabel.font = valueFont
+        /* valueLabel.font = valueFont
         valueLabel.text = ""
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(valueLabel)
@@ -233,7 +233,7 @@ class GaugeView: UIView {
         NSLayoutConstraint.activate([
             valueLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             valueLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
-            ])
+            ])*/
     }
     
     override init(frame: CGRect) {
