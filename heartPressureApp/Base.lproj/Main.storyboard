@@ -243,8 +243,8 @@ Desarrolladores:
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diastolica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-xb-kDP">
-                                        <rect key="frame" x="38" y="30" width="75" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sistolica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-xb-kDP">
+                                        <rect key="frame" x="38" y="30" width="64" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,8 +267,8 @@ Desarrolladores:
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sistolica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-Vq-5tI">
-                                        <rect key="frame" x="38" y="30" width="64" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diastolica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-Vq-5tI">
+                                        <rect key="frame" x="38" y="30" width="75" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -622,13 +622,13 @@ Desarrolladores:
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nva-bw-lHP">
-                                                        <rect key="frame" x="32" y="208" width="45.5" height="22.5"/>
+                                                        <rect key="frame" x="32" y="208" width="45.5" height="23"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latidos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-iz-YHv">
-                                                        <rect key="frame" x="85.5" y="210.5" width="55" height="20"/>
+                                                        <rect key="frame" x="85.5" y="211" width="55" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="P36-Yi-0U8"/>
                                                         </constraints>
@@ -636,8 +636,8 @@ Desarrolladores:
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="lpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqL-2S-jaw">
-                                                        <rect key="frame" x="149" y="209" width="28" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqL-2S-jaw">
+                                                        <rect key="frame" x="148.5" y="209.5" width="27.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -681,7 +681,7 @@ Desarrolladores:
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otk-Vn-zSR">
-                                                        <rect key="frame" x="201" y="293.5" width="154" height="20.5"/>
+                                                        <rect key="frame" x="201" y="294.5" width="65" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -714,17 +714,23 @@ Desarrolladores:
                                                             <segue destination="BYZ-38-t0r" kind="show" id="rYV-Xt-zPJ"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mmhg/seg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-Mm-y3u">
+                                                        <rect key="frame" x="249" y="294.5" width="79.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="fIZ-us-7te" firstAttribute="leading" secondItem="RwV-G3-pzC" secondAttribute="leading" constant="22" id="0SV-gG-g4b"/>
                                                     <constraint firstAttribute="bottom" secondItem="v6M-Yk-zXY" secondAttribute="bottom" constant="74" id="0hL-3Z-1IK"/>
-                                                    <constraint firstItem="NdV-iz-YHv" firstAttribute="centerY" secondItem="VqL-2S-jaw" secondAttribute="centerY" id="1IF-b1-VJV"/>
+                                                    <constraint firstItem="NdV-iz-YHv" firstAttribute="centerY" secondItem="VqL-2S-jaw" secondAttribute="centerY" constant="1" id="1IF-b1-VJV"/>
                                                     <constraint firstItem="fIZ-us-7te" firstAttribute="top" secondItem="9kx-Q5-rOC" secondAttribute="bottom" constant="21" id="2w4-K0-LAu"/>
                                                     <constraint firstItem="Y7w-rq-76F" firstAttribute="leading" secondItem="zDJ-8g-EVd" secondAttribute="trailing" constant="23.5" id="3GY-gd-KDu"/>
                                                     <constraint firstItem="P6f-Hv-qT4" firstAttribute="top" secondItem="ItE-bt-F3j" secondAttribute="bottom" constant="26" id="4XR-a1-ZgV"/>
                                                     <constraint firstItem="fIZ-us-7te" firstAttribute="leading" secondItem="Qcd-7L-IcL" secondAttribute="leading" id="86J-YD-bki"/>
-                                                    <constraint firstItem="Otk-Vn-zSR" firstAttribute="trailing" secondItem="P6f-Hv-qT4" secondAttribute="trailing" id="9wC-8l-YLX"/>
+                                                    <constraint firstItem="Otk-Vn-zSR" firstAttribute="trailing" secondItem="P6f-Hv-qT4" secondAttribute="trailing" constant="-89" id="9wC-8l-YLX"/>
                                                     <constraint firstItem="Nva-bw-lHP" firstAttribute="baseline" secondItem="NdV-iz-YHv" secondAttribute="baseline" id="AMB-Qx-xRP"/>
                                                     <constraint firstItem="zDJ-8g-EVd" firstAttribute="baseline" secondItem="Y7w-rq-76F" secondAttribute="baseline" constant="2" id="BaU-mL-skk"/>
                                                     <constraint firstItem="NdV-iz-YHv" firstAttribute="leading" secondItem="Nva-bw-lHP" secondAttribute="trailing" constant="8" symbolic="YES" id="CKX-J0-gQU"/>
@@ -740,16 +746,18 @@ Desarrolladores:
                                                     <constraint firstAttribute="bottom" secondItem="zDJ-8g-EVd" secondAttribute="bottom" constant="143" id="WuT-Dh-fRO"/>
                                                     <constraint firstItem="Hgz-6B-RXA" firstAttribute="leading" secondItem="RwV-G3-pzC" secondAttribute="leading" constant="32" id="ZYC-gg-WST"/>
                                                     <constraint firstItem="VqL-2S-jaw" firstAttribute="leading" secondItem="NdV-iz-YHv" secondAttribute="trailing" constant="8" symbolic="YES" id="a96-YL-QSJ"/>
-                                                    <constraint firstItem="ItE-bt-F3j" firstAttribute="baseline" secondItem="Otk-Vn-zSR" secondAttribute="baseline" id="cPo-eh-5UH"/>
-                                                    <constraint firstItem="NdV-iz-YHv" firstAttribute="top" secondItem="VqL-2S-jaw" secondAttribute="top" id="euN-zh-k5B"/>
+                                                    <constraint firstItem="ItE-bt-F3j" firstAttribute="baseline" secondItem="Otk-Vn-zSR" secondAttribute="baseline" constant="-1" id="cPo-eh-5UH"/>
+                                                    <constraint firstItem="NdV-iz-YHv" firstAttribute="top" secondItem="VqL-2S-jaw" secondAttribute="top" constant="1.5" id="euN-zh-k5B"/>
                                                     <constraint firstItem="Qcd-7L-IcL" firstAttribute="top" secondItem="VqL-2S-jaw" secondAttribute="bottom" constant="30" id="eyi-F2-dLB"/>
-                                                    <constraint firstItem="Qcd-7L-IcL" firstAttribute="trailing" secondItem="Otk-Vn-zSR" secondAttribute="trailing" id="f2t-d8-0o8"/>
+                                                    <constraint firstItem="Qcd-7L-IcL" firstAttribute="trailing" secondItem="Otk-Vn-zSR" secondAttribute="trailing" constant="89" id="f2t-d8-0o8"/>
                                                     <constraint firstItem="Nva-bw-lHP" firstAttribute="leading" secondItem="ItE-bt-F3j" secondAttribute="leading" id="io3-q2-dJu"/>
                                                     <constraint firstItem="P6f-Hv-qT4" firstAttribute="top" secondItem="RwV-G3-pzC" secondAttribute="top" constant="340" id="ise-Pu-UBw"/>
                                                     <constraint firstItem="P6f-Hv-qT4" firstAttribute="centerX" secondItem="Y7w-rq-76F" secondAttribute="centerX" constant="-61" id="j75-Bm-muj"/>
+                                                    <constraint firstItem="ygB-Mm-y3u" firstAttribute="leading" secondItem="Otk-Vn-zSR" secondAttribute="trailing" constant="-17" id="k0J-XW-RuI"/>
                                                     <constraint firstItem="bgH-pd-K2t" firstAttribute="centerX" secondItem="fIZ-us-7te" secondAttribute="centerX" id="oqM-Mg-ojG"/>
                                                     <constraint firstItem="fIZ-us-7te" firstAttribute="trailing" secondItem="Qcd-7L-IcL" secondAttribute="trailing" id="pBH-p5-7jz"/>
                                                     <constraint firstItem="Hgz-6B-RXA" firstAttribute="top" secondItem="RwV-G3-pzC" secondAttribute="top" constant="17" id="ri1-Sn-bfS"/>
+                                                    <constraint firstItem="ygB-Mm-y3u" firstAttribute="baseline" secondItem="Otk-Vn-zSR" secondAttribute="baseline" id="sV9-dS-Vvd"/>
                                                     <constraint firstItem="Qcd-7L-IcL" firstAttribute="centerX" secondItem="P6f-Hv-qT4" secondAttribute="centerX" id="swG-yz-OR7"/>
                                                     <constraint firstItem="9kx-Q5-rOC" firstAttribute="top" secondItem="bgH-pd-K2t" secondAttribute="bottom" constant="8" symbolic="YES" id="swf-bY-3KC"/>
                                                     <constraint firstItem="bgH-pd-K2t" firstAttribute="trailing" secondItem="9kx-Q5-rOC" secondAttribute="trailing" id="tPG-JV-Ego"/>
@@ -818,7 +826,7 @@ Desarrolladores:
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1476" y="-1678"/>
+            <point key="canvasLocation" x="1476" y="-1678.1109445277364"/>
         </scene>
         <!--Transis View Controller-->
         <scene sceneID="u8M-UK-do6">
@@ -1437,7 +1445,7 @@ Desarrolladores:
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mF0-VL-qaA"/>
+        <segue reference="IRL-lS-pGF"/>
         <segue reference="rYV-Xt-zPJ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -42,7 +42,7 @@ class ResultadoDoctorViewController: UIViewController {
         }
         
         lbPresion.text = sist + " / " + diast
-        lbTasa.text = String(format: "%0.5f", tasa)
+        lbTasa.text = String(format: "%0.0f", tasa)
         lblPulso.text = String(Int.random(in: 60..<100))
         
         btnSiguiente.layer.cornerRadius = 5
