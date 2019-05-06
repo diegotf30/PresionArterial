@@ -32,6 +32,8 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
     var diast : String!
     var pulso : String!
     var userName : String!
+    var msist : String!
+    var mdist : String!
     
     var db: Firestore!
     
@@ -90,10 +92,16 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
                     "Colesterol": swColesterol.isOn,
                     "Tabaquismo": swTabaquismo.isOn,
                     "Sistolica": [
-                        date : sist
+                        date : diast
                         ],
                     "Diastolica": [
-                        date : diast
+                        date : sist
+                        ],
+                    "Sistolica manual": [
+                        date : mdist
+                        ],
+                    "Diastolica manual": [
+                        date : msist
                         ]
                     ]
                 //userName = Auth.auth().currentUser?.email

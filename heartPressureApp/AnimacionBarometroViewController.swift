@@ -46,6 +46,7 @@ class AnimacionBarometroViewController: UIViewController {
 
         test.backgroundColor = .clear
         viewBarometro.addSubview(test)
+        tipoUsuario = "Doctor"
         
         var data = readDataFromCSV(fileName: "TestsApp2", fileType: "csv")
         data = cleanRows(file: data!)

@@ -15,6 +15,8 @@ class TransisViewController: UIViewController {
     var sist : String!
     var diast : String!
     var pulso : String!
+    var msist : String!
+    var mdist : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class TransisViewController: UIViewController {
             resultsView.diast = self.diast
             resultsView.tasa = self.tasa
             resultsView.pulso = self.pulso
+            resultsView.mdist = self.mdist
+            resultsView.msist = self.msist
         }
         else if segue.identifier == "search"{
             let searchView = segue.destination as! ListaPacientesViewController
@@ -36,6 +40,8 @@ class TransisViewController: UIViewController {
             searchView.pulso = self.pulso
             searchView.sist = self.sist
             searchView.diast = self.diast
+            searchView.msist = self.msist
+            searchView.mdist = self.mdist
         }
         
         

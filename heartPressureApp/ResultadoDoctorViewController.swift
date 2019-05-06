@@ -70,6 +70,9 @@ class ResultadoDoctorViewController: UIViewController {
             nextView.sist = sist
             nextView.diast = diast
             nextView.pulso = String(lblPulso.text!)
+            nextView.msist = self.msist
+            nextView.mdist = self.mdist
+            
         } else {
             let returnView = segue.destination as! CalcularViewController
             returnView.tipoUsuario = self.tipoUsuario

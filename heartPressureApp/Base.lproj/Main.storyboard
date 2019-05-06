@@ -128,7 +128,7 @@ Desarrolladores:
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sistólica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-xb-kDP">
                                         <rect key="frame" x="38" y="30" width="64" height="21"/>
@@ -152,7 +152,7 @@ Desarrolladores:
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diastólica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-Vq-5tI">
                                         <rect key="frame" x="38" y="30" width="75" height="21"/>
@@ -1240,6 +1240,9 @@ Desarrolladores:
                                                     <segment title="Paciente"/>
                                                 </segments>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="cambioUsuario:" destination="jyk-Xn-8dx" eventType="valueChanged" id="n6l-tE-nOf"/>
+                                                </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-gc-2pB">
                                                 <rect key="frame" x="216" y="606" width="104" height="34"/>
@@ -1446,8 +1449,8 @@ Desarrolladores:
                     <connections>
                         <outlet property="viewBarometro" destination="Nf2-FW-5A7" id="OTF-vV-igw"/>
                         <outlet property="viewChart" destination="ts7-Ie-i2m" id="GTh-HZ-XSN"/>
-                        <segue destination="ZqE-Gj-q1y" kind="presentation" identifier="vistaDoc" id="7FV-9Y-iDj"/>
-                        <segue destination="ZQH-lk-1OP" kind="presentation" identifier="vistaPatient" id="YFg-iA-EXL"/>
+                        <segue destination="ZqE-Gj-q1y" kind="show" identifier="vistaDoc" id="w6i-qU-ECA"/>
+                        <segue destination="ZQH-lk-1OP" kind="show" identifier="vistaPatient" id="oad-gf-L28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6m-Tk-91X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1459,7 +1462,7 @@ Desarrolladores:
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YFg-iA-EXL"/>
+        <segue reference="IRL-lS-pGF"/>
         <segue reference="Yib-qm-oP9"/>
     </inferredMetricsTieBreakers>
 </document>

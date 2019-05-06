@@ -34,11 +34,21 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
         tfPsswd.delegate = self
     }
     
+    @IBAction func cambioUsuario(_ sender: UISegmentedControl) {
+        if self.userType.selectedSegmentIndex == 0 {
+            //Doctor
+            self.tipoUsuario = "Doctor"
+        }else{
+            //Paciente
+            self.tipoUsuario = "Paciente"
+        }
+    }
+    
     @IBAction func quitaTeclado(_ sender: Any) {
         view.endEditing(true)
     }
     
-    private func createUser(){
+    func createUser(){
         let email = tfMail.text!
         let password = tfPsswd.text!
         
@@ -50,13 +60,7 @@ class RegistroViewController: UIViewController, UITextFieldDelegate  {
                 print("Failed to create a Firebase user", err)
                 return
             }
-            if self.userType.selectedSegmentIndex == 0 {
-                //Doctor
-                self.tipoUsuario = "Doctor"
-            }else{
-                //Paciente
-                self.tipoUsuario = "Paciente"
-            }
+            
             //let appDelegate = UIApplication.shared.delegate as! AppDelegate
             //appDelegate.usuario = email
             //appDelegate.registro = true

@@ -24,6 +24,8 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
     var pulso : String!
     var sist : String!
     var diast : String!
+    var msist : String!
+    var mdist : String!
     
     
     @IBOutlet weak var tbView: UITableView!
@@ -122,9 +124,19 @@ class ListaPacientesViewController: UIViewController, UITableViewDelegate, UITab
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let date = formatter.string(from: Date())
         
-        db.collection("pacientes").document(documentName).setData([ "Medicion": [
-            date : pulso
-            ] ], merge: true)
+        db.collection("pacientes").document(documentName).setData([ "Sistolica": [
+            date : sist
+            ],
+            "Distolica": [
+                date : diast
+            ],
+            "Sistolica manual":[
+                date : msist
+            ],
+            "Distolica manual":[
+                date : mdist
+            ]
+            ], merge: true)
         let alert = UIAlertController(title: "Éxito", message: "La medición fue guardada exitosamente", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true)
