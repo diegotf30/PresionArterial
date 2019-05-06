@@ -64,7 +64,7 @@ class AnimacionBarometroViewController: UIViewController {
     }
     
     @IBAction func muestraNumero(){
-        
+        print(tipoUsuario)
         if(row + 2 == n){
             tiempo.invalidate()
             sleep(1)
