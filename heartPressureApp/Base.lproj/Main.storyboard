@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="r8N-1h-HTH" kind="show" identifier="barometro" id="CfO-j4-ybv"/>
+                                    <segue destination="XRl-3e-zoI" kind="show" identifier="barometro" id="gpP-Kj-1cI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yq-kR-qEH">
@@ -105,119 +105,6 @@ Desarrolladores:
             </objects>
             <point key="canvasLocation" x="-178.40000000000001" y="53.973013493253376"/>
         </scene>
-        <!--Animacion Barometro View Controller-->
-        <scene sceneID="Ux7-XW-KlZ">
-            <objects>
-                <viewController id="r8N-1h-HTH" customClass="AnimacionBarometroViewController" customModule="heartPressureApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="08G-hc-wBY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O37-wR-aB6" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="59" y="374" width="257" height="256"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00D-oX-MSZ">
-                                <rect key="frame" x="59" y="70" width="257" height="256"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-gy-ueu">
-                                <rect key="frame" x="4" y="182" width="50" height="40"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="270">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hl-qh-jL0">
-                                <rect key="frame" x="162.5" y="329" width="50" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="T8Z-4d-UAE"/>
-                                    <constraint firstAttribute="height" constant="40" id="mzV-SB-dzm"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="180">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-ya-DbR">
-                                <rect key="frame" x="321" y="182" width="50" height="40"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="90">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0c-DT-Ktf">
-                                <rect key="frame" x="162.5" y="25" width="50" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="EQJ-Ft-zhQ"/>
-                                    <constraint firstAttribute="height" constant="40" id="pYk-lK-4QJ"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="0">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="0Hl-qh-jL0" firstAttribute="centerX" secondItem="O37-wR-aB6" secondAttribute="centerX" id="066-zB-uOU"/>
-                            <constraint firstItem="00D-oX-MSZ" firstAttribute="centerX" secondItem="08G-hc-wBY" secondAttribute="centerX" id="42a-I9-UXC"/>
-                            <constraint firstItem="0Hl-qh-jL0" firstAttribute="leading" secondItem="M0c-DT-Ktf" secondAttribute="leading" id="8ih-fv-NMV"/>
-                            <constraint firstAttribute="bottom" secondItem="00D-oX-MSZ" secondAttribute="bottom" constant="341" id="9sg-8a-4ak"/>
-                            <constraint firstItem="7Yj-QU-eLE" firstAttribute="bottom" secondItem="O37-wR-aB6" secondAttribute="bottom" constant="37" id="A8s-xq-9Q0"/>
-                            <constraint firstItem="0Hl-qh-jL0" firstAttribute="centerX" secondItem="00D-oX-MSZ" secondAttribute="centerX" id="DOW-pc-4nq"/>
-                            <constraint firstItem="cHs-ya-DbR" firstAttribute="baseline" secondItem="R5Q-gy-ueu" secondAttribute="baseline" id="DZX-nc-r3w"/>
-                            <constraint firstItem="00D-oX-MSZ" firstAttribute="leading" secondItem="7Yj-QU-eLE" secondAttribute="leading" constant="59" id="FNH-dd-yhh"/>
-                            <constraint firstItem="O37-wR-aB6" firstAttribute="top" secondItem="00D-oX-MSZ" secondAttribute="bottom" constant="48" id="GNQ-20-iGU"/>
-                            <constraint firstItem="O37-wR-aB6" firstAttribute="leading" secondItem="00D-oX-MSZ" secondAttribute="leading" id="QXl-wy-szZ"/>
-                            <constraint firstItem="0Hl-qh-jL0" firstAttribute="top" secondItem="00D-oX-MSZ" secondAttribute="bottom" constant="3" id="RwR-BM-Ei8"/>
-                            <constraint firstItem="R5Q-gy-ueu" firstAttribute="top" secondItem="7Yj-QU-eLE" secondAttribute="top" constant="162" id="UDL-gN-aHy"/>
-                            <constraint firstItem="00D-oX-MSZ" firstAttribute="top" secondItem="M0c-DT-Ktf" secondAttribute="bottom" constant="5" id="VIT-au-KCH"/>
-                            <constraint firstItem="cHs-ya-DbR" firstAttribute="leading" secondItem="00D-oX-MSZ" secondAttribute="trailing" constant="5" id="bzv-7i-D3Y"/>
-                            <constraint firstItem="cHs-ya-DbR" firstAttribute="firstBaseline" secondItem="R5Q-gy-ueu" secondAttribute="firstBaseline" id="ju6-fw-C0m"/>
-                            <constraint firstItem="R5Q-gy-ueu" firstAttribute="leading" secondItem="7Yj-QU-eLE" secondAttribute="leading" constant="4" id="mg9-8K-RDx"/>
-                            <constraint firstItem="00D-oX-MSZ" firstAttribute="leading" secondItem="R5Q-gy-ueu" secondAttribute="trailing" constant="5" id="mm3-19-l60"/>
-                            <constraint firstItem="7Yj-QU-eLE" firstAttribute="trailing" secondItem="cHs-ya-DbR" secondAttribute="trailing" constant="4" id="pYQ-5v-BlF"/>
-                            <constraint firstItem="00D-oX-MSZ" firstAttribute="top" secondItem="7Yj-QU-eLE" secondAttribute="top" constant="50" id="rUG-DV-Kr1"/>
-                            <constraint firstItem="7Yj-QU-eLE" firstAttribute="bottom" secondItem="cHs-ya-DbR" secondAttribute="bottom" constant="445" id="u1f-x5-D0m"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="7Yj-QU-eLE"/>
-                    </view>
-                    <connections>
-                        <outlet property="viewBarometro" destination="00D-oX-MSZ" id="sz2-s1-X94"/>
-                        <outlet property="viewChart" destination="O37-wR-aB6" id="unI-5K-8q6"/>
-                        <segue destination="ZQH-lk-1OP" kind="presentation" identifier="vistaPatient" id="mF0-VL-qaA"/>
-                        <segue destination="ZqE-Gj-q1y" kind="show" identifier="vistaDoc" id="dIt-3q-KV3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e6n-2w-eyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="988" y="-160.56971514242881"/>
-        </scene>
         <!--Manual View Controller-->
         <scene sceneID="Pht-gV-n2N">
             <objects>
@@ -243,7 +130,7 @@ Desarrolladores:
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sistolica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-xb-kDP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sistólica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-xb-kDP">
                                         <rect key="frame" x="38" y="30" width="64" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -267,7 +154,7 @@ Desarrolladores:
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diastolica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-Vq-5tI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diastólica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-Vq-5tI">
                                         <rect key="frame" x="38" y="30" width="75" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1440,12 +1327,139 @@ Desarrolladores:
             </objects>
             <point key="canvasLocation" x="-1183" y="115"/>
         </scene>
+        <!--Animacion Barometro View Controller-->
+        <scene sceneID="qUh-2W-NwC">
+            <objects>
+                <viewController id="XRl-3e-zoI" customClass="AnimacionBarometroViewController" customModule="heartPressureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="daq-00-pN8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ts7-Ie-i2m" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="59" y="374" width="257" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nf2-FW-5A7">
+                                <rect key="frame" x="59" y="70" width="257" height="256"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb7-MW-0qy">
+                                        <rect key="frame" x="0.0" y="208" width="50" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="0">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-nv-m4W">
+                                        <rect key="frame" x="222" y="8" width="37" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="180">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMP-HJ-aWT">
+                                <rect key="frame" x="133" y="44" width="37" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="120">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA6-F0-yoa">
+                                <rect key="frame" x="23" y="138" width="50" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="60">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ys4-r0-ggu">
+                                <rect key="frame" x="309" y="215" width="50" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="240">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uc-9n-qST">
+                                <rect key="frame" x="208" y="313" width="50" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="300">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Nf2-FW-5A7" secondAttribute="bottom" constant="341" id="6HH-Ol-C75"/>
+                            <constraint firstItem="Nf2-FW-5A7" firstAttribute="trailing" secondItem="ts7-Ie-i2m" secondAttribute="trailing" id="9vc-WY-MD9"/>
+                            <constraint firstItem="Nf2-FW-5A7" firstAttribute="top" secondItem="dGE-7t-ziM" secondAttribute="top" constant="50" id="GBC-oG-p9U"/>
+                            <constraint firstItem="Nf2-FW-5A7" firstAttribute="centerX" secondItem="daq-00-pN8" secondAttribute="centerX" id="GiR-jK-7ar"/>
+                            <constraint firstItem="Nf2-FW-5A7" firstAttribute="leading" secondItem="dGE-7t-ziM" secondAttribute="leading" constant="59" id="aMZ-MF-ElM"/>
+                            <constraint firstItem="ts7-Ie-i2m" firstAttribute="top" secondItem="Nf2-FW-5A7" secondAttribute="bottom" constant="48" id="bom-uP-lWC"/>
+                            <constraint firstItem="Nf2-FW-5A7" firstAttribute="leading" secondItem="ts7-Ie-i2m" secondAttribute="leading" id="iG0-aX-j8s"/>
+                            <constraint firstItem="dGE-7t-ziM" firstAttribute="bottom" secondItem="ts7-Ie-i2m" secondAttribute="bottom" constant="37" id="yvi-UM-Xxf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dGE-7t-ziM"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewBarometro" destination="Nf2-FW-5A7" id="OTF-vV-igw"/>
+                        <outlet property="viewChart" destination="ts7-Ie-i2m" id="GTh-HZ-XSN"/>
+                        <segue destination="ZqE-Gj-q1y" kind="presentation" identifier="vistaDoc" id="7FV-9Y-iDj"/>
+                        <segue destination="ZQH-lk-1OP" kind="presentation" identifier="vistaPatient" id="YFg-iA-EXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6m-Tk-91X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="-304"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="IRL-lS-pGF"/>
-        <segue reference="rYV-Xt-zPJ"/>
+        <segue reference="MGS-iq-I9E"/>
     </inferredMetricsTieBreakers>
 </document>

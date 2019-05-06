@@ -18,11 +18,11 @@ class GaugeView: UIView {
     
     var insideColor = UIColor.white
     
-    var segmentWidth: CGFloat = 20
+    var segmentWidth: CGFloat = 1
     var segmentColors = [UIColor(red: 0.7, green: 0, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0, green: 0.5, blue: 0, alpha: 1), UIColor(red: 0.7, green: 0, blue: 0, alpha: 1)]
     
-    var totalAngle: CGFloat = 100
-    var rotation: CGFloat = 0
+    var totalAngle: CGFloat = 270
+    var rotation: CGFloat = -135
     
     var majorTickColor = UIColor.black
     var majorTickWidth: CGFloat = 2
@@ -31,7 +31,7 @@ class GaugeView: UIView {
     var minorTickColor = UIColor.black.withAlphaComponent(0.5)
     var minorTickWidth: CGFloat = 1
     var minorTickLength: CGFloat = 20
-    var minorTickCount = 3
+    var minorTickCount = 5
     
     var outerCenterDiscColor = UIColor(white: 0.9, alpha: 1)
     var outerCenterDiscWidth: CGFloat = 35
@@ -58,7 +58,7 @@ class GaugeView: UIView {
             
             // create a lerp from the start angle (rotation) through to the end angle (rotation + totalAngle)
             let lerpFrom = rotation
-            let lerpTo = rotation + totalAngle
+            let lerpTo = CGFloat(-45)
             
             // lerp from the start to the end position, based on the needle's position
             let needleRotation = lerpFrom + (lerpTo - lerpFrom) * needlePosition
@@ -73,7 +73,7 @@ class GaugeView: UIView {
     override func draw(_ rect: CGRect) {
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
         drawBackground(in: rect, context: ctx)
-        drawSegments(in: rect, context: ctx)
+        //drawSegments(in: rect, context: ctx)
         drawTicks(in: rect, context: ctx)
         drawCenterDisc(in: rect, context: ctx)
     }
@@ -99,51 +99,51 @@ class GaugeView: UIView {
         return number * .pi / 180
     }
     
-    
-    func drawSegments(in rect: CGRect, context ctx: CGContext) {
-        // 1: Save the current drawing configuration
-        ctx.saveGState()
-        
-        // 2: Move to the center of our drawing rectangle and rotate so that we're pointing at the start of the first segment
-        ctx.translateBy(x: rect.midX, y: rect.midY)
-        ctx.rotate(by: deg2rad(90) - (.pi / 2))
-        
-        // 3: Set up the user's line width
-        ctx.setLineWidth(segmentWidth)
-        
-        // 4: Calculate the size of each segment in the total gauge
-        let segmentAngle = deg2rad(140 / CGFloat(segmentColors.count))
-        
-        // 5: Calculate how wide the segment arcs should be
-        let segmentRadius = (((rect.width - segmentWidth) / 2) - outerBezelWidth) - innerBezelWidth
-        
-        // 6: Draw each segment
-        for (index, segment) in segmentColors.enumerated() {
-            // figure out where the segment starts in our arc
-            let start = CGFloat(index) * segmentAngle
-            
-            // activate its color
-            segment.set()
-            
-            // add a path for the segment
-            ctx.addArc(center: .zero, radius: segmentRadius, startAngle: start, endAngle: start + segmentAngle, clockwise: false)
-            
-            // and stroke it using the activated color
-            ctx.drawPath(using: .stroke)
-        }
-        
-        // 7: Reset the graphics state
-        ctx.restoreGState()
-    }
-    
+    /*
+     func drawSegments(in rect: CGRect, context ctx: CGContext) {
+     // 1: Save the current drawing configuration
+     ctx.saveGState()
+     
+     // 2: Move to the center of our drawing rectangle and rotate so that we're pointing at the start of the first segment
+     ctx.translateBy(x: rect.midX, y: rect.midY)
+     ctx.rotate(by: deg2rad(rotation) - (.pi / 2))
+     
+     // 3: Set up the user's line width
+     ctx.setLineWidth(segmentWidth)
+     
+     // 4: Calculate the size of each segment in the total gauge
+     let segmentAngle = deg2rad(totalAngle / CGFloat(segmentColors.count))
+     
+     // 5: Calculate how wide the segment arcs should be
+     let segmentRadius = (((rect.width - segmentWidth) / 2) - outerBezelWidth) - innerBezelWidth
+     
+     // 6: Draw each segment
+     for (index, segment) in segmentColors.enumerated() {
+     // figure out where the segment starts in our arc
+     let start = CGFloat(index) * segmentAngle
+     
+     // activate its color
+     segment.set()
+     
+     // add a path for the segment
+     ctx.addArc(center: .zero, radius: segmentRadius, startAngle: start, endAngle: start + segmentAngle, clockwise: false)
+     
+     // and stroke it using the activated color
+     ctx.drawPath(using: .stroke)
+     }
+     
+     // 7: Reset the graphics state
+     ctx.restoreGState()
+     }
+     */
     
     func drawTicks(in rect: CGRect, context ctx: CGContext) {
         // save our clean graphics state
         ctx.saveGState()
         ctx.translateBy(x: rect.midX, y: rect.midY)
-        ctx.rotate(by: deg2rad(0) - (.pi / 2))
+        ctx.rotate(by: deg2rad(-135) - (.pi / 2))
         
-        let segmentAngle = deg2rad(450 / CGFloat(segmentColors.count))
+        let segmentAngle = deg2rad(300 / CGFloat(segmentColors.count))
         
         let segmentRadius = (((rect.width - segmentWidth) / 2) - outerBezelWidth) - innerBezelWidth
         
@@ -155,7 +155,7 @@ class GaugeView: UIView {
         let majorEnd = segmentRadius + (segmentWidth / 2)
         let majorStart = majorEnd - majorTickLength
         
-        for _ in 0 ... segmentColors.count {
+        for _ in 0 ...  5 {
             ctx.move(to: CGPoint(x: majorStart, y: 0))
             ctx.addLine(to: CGPoint(x: majorEnd, y: 0))
             ctx.drawPath(using: .stroke)
@@ -225,15 +225,17 @@ class GaugeView: UIView {
         needle.center = CGPoint(x: bounds.midX, y: bounds.midY)
         addSubview(needle)
         
-        /* valueLabel.font = valueFont
-        valueLabel.text = ""
-        valueLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(valueLabel)
-        
-        NSLayoutConstraint.activate([
-            valueLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            valueLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
-            ])*/
+        /*
+         valueLabel.font = valueFont
+         valueLabel.text = "0"
+         valueLabel.translatesAutoresizingMaskIntoConstraints = false
+         addSubview(valueLabel)
+         
+         NSLayoutConstraint.activate([
+         valueLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+         valueLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
+         ])
+         */
     }
     
     override init(frame: CGRect) {

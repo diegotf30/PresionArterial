@@ -89,8 +89,11 @@ class InformacionDoctorViewController: UIViewController, UITextFieldDelegate {
                     "Diabetes": swDiabetes.isOn,
                     "Colesterol": swColesterol.isOn,
                     "Tabaquismo": swTabaquismo.isOn,
-                    "Medicion": [
-                        date : pulso
+                    "Sistolica": [
+                        date : sist
+                        ],
+                    "Diastolica": [
+                        date : diast
                         ]
                     ]
                 //userName = Auth.auth().currentUser?.email
