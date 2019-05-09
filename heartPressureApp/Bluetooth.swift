@@ -28,7 +28,7 @@ class Bluetooth: NSObject {
     var last : String!
 
     
-    func startSearching(onFound: @escaping (_ s: String) -> Void) {
+    func startSearching(onFound: @escaping (_ d: [Float]) -> Void) {
         let serviceUUID = CBUUID(string:"ffe0")
         var peripheral: Peripheral?
         let dateCharacteristicUUID = CBUUID(string:"ffe1")
@@ -169,7 +169,8 @@ class Bluetooth: NSObject {
         }
     }
     
-    func cleanDataPoint(dataPoint: String, closure: @escaping (_ s: String) -> Void) {
+    // Los datos de BT vienen partidos, una vez consolidado 1 dato llamamos la función pasada
+    func cleanDataPoint(dataPoint: String, closure: @escaping (_ d: [Float]) -> Void) {
         var x = dataPoint.components(separatedBy: "\r\n")
         if first {
             // Since we're sending data even before connection, we ignore first (broken) datapoint
@@ -183,8 +184,8 @@ class Bluetooth: NSObject {
                 let data = last + x[0]
                 let split = data.components(separatedBy: "\r\n")
                 if split.count > 1 {
-                    closure(split[0])
-                    closure(split[1])
+                    closure(splitData(split[0]))
+                    closure(splitData(split[1]))
                 }
                 else {
                     closure(data)
@@ -192,13 +193,18 @@ class Bluetooth: NSObject {
                 last = x[1]
             }
             else if x.count == 3 {
-                closure(last + x[0])
-                closure(x[1])
+                closure(splitData(last + x[0]))
+                closure(splitData(x[1]))
                 last = x[2]
             }
             else {
                 last += x[0]
             }
         }
+    }
+
+    func splitData( _ s : String) -> [Float] {
+        let d = s.components(separatedBy: ";")
+        return [Float(d[0])!, Float(d[1])!, Float(d[2])!]
     }
 }

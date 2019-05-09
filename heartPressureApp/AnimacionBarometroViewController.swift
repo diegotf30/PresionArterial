@@ -22,16 +22,17 @@ class AnimacionBarometroViewController: UIViewController {
     var counter = 0
     
     var bt = Bluetooth()
+    var sim = CSVSimulator()
     var arrData : [[Float]] = []
     var lastDataPoint = [Float]()
     var startProcessing = false
     
-    var mitad = 0 //indice de la mitad de los datos
-    var amp = 0.0 //amplitud de presión
-    var sist = 0.0 //sistolica
-    var diast = 0.0 //diastolica
+    var amp = 0.0 // amplitud de presión
+    var sist = 0.0 // sistolica
+    var diast = 0.0 // diastolica
     var tasa = [Double]()
     var tasaDesinflado = 0.0
+    var maxIndex = -1
     
     let maxPressure = 260.0
     let pressureOK = 120.0
@@ -46,32 +47,31 @@ class AnimacionBarometroViewController: UIViewController {
 
         test.backgroundColor = .clear
         viewBarometro.addSubview(test)
-        bt.startSearching(onFound: updateGraphs(_:))
-    }
+        tipoUsuario = "Doctor"
 
-    func splitData( _ s : String) -> [Float] {
-        let d = s.components(separatedBy: ";")
-        return [Float(d[0])!, Float(d[1])!, Float(d[2])!]
+        // Uncomment to get data from BT Device
+        //bt.startSearching(onFound: updateGraphs(_:))
+        sim.startSimulation(onUpdate: updateGraphs(_:))
     }
     
-    func updateGraphs( _ s : String) {
-        lastDataPoint = splitData(s) // [timestamp, pressure, pulse]
+    func updateGraphs( _ d : [Float]) {
+        lastDataPoint = d // [timestamp, pressure, pulse]
 
-        if lastDataPoint[1] > 5 {
+        if lastDataPoint[1] > 50 {
             startProcessing = true
         }
-        
 
-        if startProcessing && lastDataPoint[1] > 20 {
+        if startProcessing && lastDataPoint[1] > 60 {
             arrData.append(lastDataPoint)
             animate(pressure: Double(lastDataPoint[1]))
         }
         else {
             startProcessing = false
-            if(tipoUsuario == "Paciente"){
+            obtenerResultados()
+            if(tipoUsuario == "Paciente") {
                 self.performSegue(withIdentifier: "vistaPatient", sender: nil)
             }
-            else if(tipoUsuario == "Doctor"){
+            else if(tipoUsuario == "Doctor") {
                 self.performSegue(withIdentifier: "vistaDoc", sender: nil)
             }
         }
@@ -84,16 +84,17 @@ class AnimacionBarometroViewController: UIViewController {
             self.test.value = pressure
             // Graph
             let value = ChartDataEntry(x: Double(self.counter), y: pressure)
-            self.lineChartData.append(value)
             
             self.counter += 1
-            if(self.counter > 300){
-                self.lineChartData.removeFirst()
+            if(self.counter > 50) { // So we dont saturate the graph
+                self.lineChartData.append(value)
+                self.counter = 0
             }
             self.lineChartUpdate(values: self.lineChartData)
         }
     }
     
+    // Graphs pressure
     func lineChartUpdate(values: [ChartDataEntry]){
         // X : Time && Y : Pressure (mmHg)
         
@@ -118,6 +119,55 @@ class AnimacionBarometroViewController: UIViewController {
         viewChart.data = data
         viewChart.zoomToCenter(scaleX: 0, scaleY: 0)
         viewChart.chartDescription?.text = "Test.-"
+    }
+
+    func obtenerResultados() {
+        var n = arrData.count
+        var mitad = n / 2
+        var temp = 0.0
+        var tasaTemp = 0.0
+        var amp = getAmplitude()
+
+        //tasa de desinflado
+        for i in (mitad + 1)...n
+        {
+            tasaTemp = arrData[i][1])! - arrData[i - 1][1]
+            tasa.append(tasaTemp)
+        }
+        for i in 0...(tasa.count - 1) {
+            tasaDesinflado = tasaDesinflado + tasa[i]
+        }
+        tasaDesinflado = (tasaDesinflado / Double(tasa.count)) * 1000
+
+        //sistolica
+        for i in 0...maxIndex
+        {
+            if(arrData[i][1] >= 0.5 * amp) {
+                sist = arrData[i][1]
+                break
+            }
+        }
+
+        //diastolica
+        for i in maxIndex...n
+        {
+            if(arrData[i][1] <= 0.8 * amp) {
+                diast = arrData[i][1]
+                break
+            }
+        }
+    }
+
+    func getAmplitude() -> Float {
+        max = -1.0
+        for i in 0...arrData.count {
+            dataPoint = arrData[i]
+            if dataPoint[1] > max {
+                max = dataPoint[1]
+                maxIndex = i
+            }
+        }
+        return max
     }
     
     //SEGUE
